@@ -1,0 +1,45 @@
+### tag=mem cores=1 group=MEM kernel=stream_mem_avx_fma run=1/2
+### host=mad13 label=run date=2026-08-14T13:35:59+01:00
++ numactl --cpunodebind=0 --membind=0 likwid-perfctr -C 0 -g MEM -m -o logs_pstate2/mem_1c_run1.txt likwid-bench -t stream_mem_avx_fma -w M0:536870912B:1
+
+INFO: You are running LIKWID in a cpuset with 48 CPUs. Taking given IDs as logical ID in cpuset
+Warning: Sanitizing vector length to a multiple of the loop stride 16 and thread count 1 from 22369621 elements (178956968 bytes) to 22369616 elements (178956928 bytes)
+Allocate: Process running on hwthread 0 (Domain M0) - Vector length 22369616/178956928 Offset 0 Alignment 512
+Allocate: Process running on hwthread 0 (Domain M0) - Vector length 22369616/178956928 Offset 0 Alignment 512
+Allocate: Process running on hwthread 0 (Domain M0) - Vector length 22369616/178956928 Offset 0 Alignment 512
+--------------------------------------------------------------------------------
+LIKWID MICRO BENCHMARK
+Test: stream_mem_avx_fma
+--------------------------------------------------------------------------------
+Using 1 work groups
+Using 1 threads
+--------------------------------------------------------------------------------
+Using Likwid Marker API
+--------------------------------------------------------------------------------
+Group: 0 Thread 0 Global Thread 0 running on hwthread 0 - Vector length 22369616 Offset 0
+--------------------------------------------------------------------------------
+Cycles:			3910824840
+CPU Clock:		2396372074
+Cycle Clock:		2396372074
+Time:			1.631977e+00 sec
+Iterations:		128
+Iterations per thread:	128
+Inner loop executions:	1398101
+Size (Byte):		536870784
+Size per thread:	536870784
+Number of Flops:	5726621696
+MFlops/s:		3509.01
+Data volume (Byte):	68719460352
+MByte/s:		42108.10
+Cycles per update:	1.365840
+Cycles per cacheline:	10.926721
+Loads per update:	2
+Stores per update:	1
+Load bytes per element:	16
+Store bytes per elem.:	8
+Load/store ratio:	2.00
+Instructions:		2684353937
+UOPs:			3937052416
+--------------------------------------------------------------------------------
+Writing Likwid Marker API results to file /tmp/likwid_223116.txt
+### exit=0

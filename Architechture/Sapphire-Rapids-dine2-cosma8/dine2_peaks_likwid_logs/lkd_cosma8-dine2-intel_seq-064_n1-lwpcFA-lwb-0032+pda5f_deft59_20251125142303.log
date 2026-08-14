@@ -1,0 +1,1487 @@
+Tue 25 Nov 14:23:03 GMT 2025
+/snap8/scratch/dp004/dc-asif1/SWIFT_CPU_BENCH/pstb004
+Architecture:                            x86_64
+CPU op-mode(s):                          32-bit, 64-bit
+Address sizes:                           46 bits physical, 57 bits virtual
+Byte Order:                              Little Endian
+CPU(s):                                  128
+On-line CPU(s) list:                     0-127
+Vendor ID:                               GenuineIntel
+Model name:                              Intel(R) Xeon(R) Gold 6430
+CPU family:                              6
+Model:                                   143
+Thread(s) per core:                      2
+Core(s) per socket:                      32
+Socket(s):                               2
+Stepping:                                8
+CPU(s) scaling MHz:                      70%
+CPU max MHz:                             3400.0000
+CPU min MHz:                             800.0000
+BogoMIPS:                                4200.00
+Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cat_l2 cdp_l3 cdp_l2 ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local split_lock_detect avx_vnni avx512_bf16 wbnoinvd dtherm ida arat pln pts hwp hwp_act_window hwp_epp hwp_pkg_req vnmi avx512vbmi umip pku ospke waitpkg avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg tme avx512_vpopcntdq la57 rdpid bus_lock_detect cldemote movdiri movdir64b enqcmd fsrm md_clear serialize tsxldtrk pconfig arch_lbr ibt amx_bf16 avx512_fp16 amx_tile amx_int8 flush_l1d arch_capabilities
+Virtualization:                          VT-x
+L1d cache:                               3 MiB (64 instances)
+L1i cache:                               2 MiB (64 instances)
+L2 cache:                                128 MiB (64 instances)
+L3 cache:                                120 MiB (2 instances)
+NUMA node(s):                            2
+NUMA node0 CPU(s):                       0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,90,92,94,96,98,100,102,104,106,108,110,112,114,116,118,120,122,124,126
+NUMA node1 CPU(s):                       1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,61,63,65,67,69,71,73,75,77,79,81,83,85,87,89,91,93,95,97,99,101,103,105,107,109,111,113,115,117,119,121,123,125,127
+Vulnerability Gather data sampling:      Not affected
+Vulnerability Indirect target selection: Not affected
+Vulnerability Itlb multihit:             Not affected
+Vulnerability L1tf:                      Not affected
+Vulnerability Mds:                       Not affected
+Vulnerability Meltdown:                  Not affected
+Vulnerability Mmio stale data:           Not affected
+Vulnerability Reg file data sampling:    Not affected
+Vulnerability Retbleed:                  Not affected
+Vulnerability Spec rstack overflow:      Not affected
+Vulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; RSB filling; PBRSB-eIBRS SW sequence; BHI BHI_DIS_S
+Vulnerability Srbds:                     Not affected
+Vulnerability Tsx async abort:           Not affected
+               total        used        free      shared  buff/cache   available
+Mem:         2063622       11772     2055767         233        3546     2051849
+Swap:           8187           0        8187
+available: 2 nodes (0-1)
+node 0 cpus: 0 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 52 54 56 58 60 62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 92 94 96 98 100 102 104 106 108 110 112 114 116 118 120 122 124 126
+node 0 size: 1031498 MB
+node 0 free: 1026358 MB
+node 1 cpus: 1 3 5 7 9 11 13 15 17 19 21 23 25 27 29 31 33 35 37 39 41 43 45 47 49 51 53 55 57 59 61 63 65 67 69 71 73 75 77 79 81 83 85 87 89 91 93 95 97 99 101 103 105 107 109 111 113 115 117 119 121 123 125 127
+node 1 size: 1032123 MB
+node 1 free: 1029408 MB
+node distances:
+node     0    1 
+   0:   10   21 
+   1:   21   10 
+                           node0           node1
+numa_hit              1645867973       904439199
+numa_miss                      0           18866
+numa_foreign               18866               0
+interleave_hit          99501289        49080453
+local_node            1611539202       889451534
+other_node              34328771        15006530
+ 14:23:03 up 4 days, 18:29,  0 users,  load average: 22.32, 7.40, 2.65
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+
+OneAPI environment modules are now accessible.
+Use module available to see these modules.
+You probably want to:
+module load compiler-rt tbb umf compiler mpi
+to make the compiler and MPI available.
+
+Setting cpu: 0
+Setting cpu: 1
+Setting cpu: 2
+Setting cpu: 3
+Setting cpu: 4
+Setting cpu: 5
+Setting cpu: 6
+Setting cpu: 7
+Setting cpu: 8
+Setting cpu: 9
+Setting cpu: 10
+Setting cpu: 11
+Setting cpu: 12
+Setting cpu: 13
+Setting cpu: 14
+Setting cpu: 15
+Setting cpu: 16
+Setting cpu: 17
+Setting cpu: 18
+Setting cpu: 19
+Setting cpu: 20
+Setting cpu: 21
+Setting cpu: 22
+Setting cpu: 23
+Setting cpu: 24
+Setting cpu: 25
+Setting cpu: 26
+Setting cpu: 27
+Setting cpu: 28
+Setting cpu: 29
+Setting cpu: 30
+Setting cpu: 31
+Setting cpu: 32
+Setting cpu: 33
+Setting cpu: 34
+Setting cpu: 35
+Setting cpu: 36
+Setting cpu: 37
+Setting cpu: 38
+Setting cpu: 39
+Setting cpu: 40
+Setting cpu: 41
+Setting cpu: 42
+Setting cpu: 43
+Setting cpu: 44
+Setting cpu: 45
+Setting cpu: 46
+Setting cpu: 47
+Setting cpu: 48
+Setting cpu: 49
+Setting cpu: 50
+Setting cpu: 51
+Setting cpu: 52
+Setting cpu: 53
+Setting cpu: 54
+Setting cpu: 55
+Setting cpu: 56
+Setting cpu: 57
+Setting cpu: 58
+Setting cpu: 59
+Setting cpu: 60
+Setting cpu: 61
+Setting cpu: 62
+Setting cpu: 63
+Setting cpu: 64
+Setting cpu: 65
+Setting cpu: 66
+Setting cpu: 67
+Setting cpu: 68
+Setting cpu: 69
+Setting cpu: 70
+Setting cpu: 71
+Setting cpu: 72
+Setting cpu: 73
+Setting cpu: 74
+Setting cpu: 75
+Setting cpu: 76
+Setting cpu: 77
+Setting cpu: 78
+Setting cpu: 79
+Setting cpu: 80
+Setting cpu: 81
+Setting cpu: 82
+Setting cpu: 83
+Setting cpu: 84
+Setting cpu: 85
+Setting cpu: 86
+Setting cpu: 87
+Setting cpu: 88
+Setting cpu: 89
+Setting cpu: 90
+Setting cpu: 91
+Setting cpu: 92
+Setting cpu: 93
+Setting cpu: 94
+Setting cpu: 95
+Setting cpu: 96
+Setting cpu: 97
+Setting cpu: 98
+Setting cpu: 99
+Setting cpu: 100
+Setting cpu: 101
+Setting cpu: 102
+Setting cpu: 103
+Setting cpu: 104
+Setting cpu: 105
+Setting cpu: 106
+Setting cpu: 107
+Setting cpu: 108
+Setting cpu: 109
+Setting cpu: 110
+Setting cpu: 111
+Setting cpu: 112
+Setting cpu: 113
+Setting cpu: 114
+Setting cpu: 115
+Setting cpu: 116
+Setting cpu: 117
+Setting cpu: 118
+Setting cpu: 119
+Setting cpu: 120
+Setting cpu: 121
+Setting cpu: 122
+Setting cpu: 123
+Setting cpu: 124
+Setting cpu: 125
+Setting cpu: 126
+Setting cpu: 127
+Setting cpu: 0
+Setting cpu: 1
+Setting cpu: 2
+Setting cpu: 3
+Setting cpu: 4
+Setting cpu: 5
+Setting cpu: 6
+Setting cpu: 7
+Setting cpu: 8
+Setting cpu: 9
+Setting cpu: 10
+Setting cpu: 11
+Setting cpu: 12
+Setting cpu: 13
+Setting cpu: 14
+Setting cpu: 15
+Setting cpu: 16
+Setting cpu: 17
+Setting cpu: 18
+Setting cpu: 19
+Setting cpu: 20
+Setting cpu: 21
+Setting cpu: 22
+Setting cpu: 23
+Setting cpu: 24
+Setting cpu: 25
+Setting cpu: 26
+Setting cpu: 27
+Setting cpu: 28
+Setting cpu: 29
+Setting cpu: 30
+Setting cpu: 31
+Setting cpu: 32
+Setting cpu: 33
+Setting cpu: 34
+Setting cpu: 35
+Setting cpu: 36
+Setting cpu: 37
+Setting cpu: 38
+Setting cpu: 39
+Setting cpu: 40
+Setting cpu: 41
+Setting cpu: 42
+Setting cpu: 43
+Setting cpu: 44
+Setting cpu: 45
+Setting cpu: 46
+Setting cpu: 47
+Setting cpu: 48
+Setting cpu: 49
+Setting cpu: 50
+Setting cpu: 51
+Setting cpu: 52
+Setting cpu: 53
+Setting cpu: 54
+Setting cpu: 55
+Setting cpu: 56
+Setting cpu: 57
+Setting cpu: 58
+Setting cpu: 59
+Setting cpu: 60
+Setting cpu: 61
+Setting cpu: 62
+Setting cpu: 63
+Setting cpu: 64
+Setting cpu: 65
+Setting cpu: 66
+Setting cpu: 67
+Setting cpu: 68
+Setting cpu: 69
+Setting cpu: 70
+Setting cpu: 71
+Setting cpu: 72
+Setting cpu: 73
+Setting cpu: 74
+Setting cpu: 75
+Setting cpu: 76
+Setting cpu: 77
+Setting cpu: 78
+Setting cpu: 79
+Setting cpu: 80
+Setting cpu: 81
+Setting cpu: 82
+Setting cpu: 83
+Setting cpu: 84
+Setting cpu: 85
+Setting cpu: 86
+Setting cpu: 87
+Setting cpu: 88
+Setting cpu: 89
+Setting cpu: 90
+Setting cpu: 91
+Setting cpu: 92
+Setting cpu: 93
+Setting cpu: 94
+Setting cpu: 95
+Setting cpu: 96
+Setting cpu: 97
+Setting cpu: 98
+Setting cpu: 99
+Setting cpu: 100
+Setting cpu: 101
+Setting cpu: 102
+Setting cpu: 103
+Setting cpu: 104
+Setting cpu: 105
+Setting cpu: 106
+Setting cpu: 107
+Setting cpu: 108
+Setting cpu: 109
+Setting cpu: 110
+Setting cpu: 111
+Setting cpu: 112
+Setting cpu: 113
+Setting cpu: 114
+Setting cpu: 115
+Setting cpu: 116
+Setting cpu: 117
+Setting cpu: 118
+Setting cpu: 119
+Setting cpu: 120
+Setting cpu: 121
+Setting cpu: 122
+Setting cpu: 123
+Setting cpu: 124
+Setting cpu: 125
+Setting cpu: 126
+Setting cpu: 127
+Setting cpu: 0
+Error setting new values. Common errors:
+- Do you have proper administration rights? (super-user?)
+- Is the governor you requested available and modprobed?
+- Trying to set an invalid policy?
+- Trying to set a specific frequency, but userspace governor is not available,
+   for example because of hardware which cannot be set to a specific frequency
+   or because the userspace governor isn't loaded?
+analyzing CPU 83:
+  driver: intel_pstate
+  CPUs which run at the same hardware frequency: 83
+  CPUs which need to have their frequency coordinated by software: 83
+  maximum transition latency:  Cannot determine or is not supported.
+  hardware limits: 800 MHz - 3.40 GHz
+  available cpufreq governors: performance powersave
+  current policy: frequency should be within 2.40 GHz and 2.40 GHz.
+                  The governor "performance" may decide which speed to use
+                  within this range.
+  current CPU frequency: Unable to call hardware
+  current CPU frequency: 2.40 GHz (asserted by call to kernel)
+  boost state support:
+    Supported: yes
+    Active: yes
+Currently Loaded Modulefiles:
+ 1) cosma/2024(default)   3) compiler-rt/latest   5) umf/latest        7) mpi/latest             9) fftw/3.3.10(default)  11) python/3.12.4(default)  13) parallel_hdf5/1.14.4(default)  
+ 2) intel_comp/2025.0.1   4) tbb/latest           6) compiler/latest   8) parmetis/4.0.3-64bit  10) gsl/2.8(default)      12) ucx/1.17.0(default)     14) likwid/5.4.1                   
+SHELL=/bin/bash
+TBBROOT=/cosma/local/intel/oneAPI_2025.0.1/tbb/2022.0
+I_MPI_F77=ifx
+SLURM_STEP_NUM_TASKS=1
+SLURM_JOB_USER=dc-asif1
+CMAKE_INCLUDE_PATH_modshare=/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/include:1:/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/include:1:/cosma/local/Python/3.12.4/include/python3.12/:1:/cosma/local/ucx/1.17.0/include:1:/cosma/local/likwid/intel_2025.0.1/5.4.1/include:1:/cosma/local/gsl/2.8/include:1:/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/include:1
+SLURM_TASKS_PER_NODE=1
+SLURM_JOB_UID=22100
+HISTCONTROL=ignoredups
+TERM_PROGRAM_VERSION=3.2a
+SLURM_CPU_BIND=quiet,mask_cpu:0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+SLURM_TASK_PID=262914
+TMUX=/tmp/tmux-22100/default,2658108,5
+PKG_CONFIG_PATH=/cosma/local/likwid/intel_2025.0.1/5.4.1/lib/pkgconfig:/cosma/local/ucx/1.17.0/lib/pkgconfig:/cosma/local/Python/3.12.4/lib/pkgconfig:/cosma/local/gsl/2.8/lib/pkgconfig:/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/lib/pkgconfig:/cosma/local/intel/oneAPI_2025.0.1/compiler/2025.0/lib/pkgconfig:/cosma/local/intel/oneAPI_2025.0.1/tbb/2022.0/lib/pkgconfig
+SLURM_LOCALID=0
+SLURM_SUBMIT_DIR=/snap8/scratch/dp004/dc-asif1/SWIFT_CPU_BENCH/pstb004
+SLURM_CPU_BIND_VERBOSE=quiet
+COSMA_OPT=-O3 -mavx
+HISTSIZE=
+HOSTNAME=login8b.pri.cosma.local
+SLURMD_NODENAME=gc002
+SLURM_JOB_START_TIME=1764069683
+HYDRA_LAUNCHER_EXTRA_ARGS=--external-launcher
+SLURM_STEP_NODELIST=gc002
+I_MPI_CC=icx
+I_MPI_ROOT=/cosma/local/intel/oneAPI_2025.0.1/mpi/2021.14
+PKG_CONFIG_PATH_modshare=/cosma/local/ucx/1.17.0/lib/pkgconfig:1:/cosma/local/intel/oneAPI_2025.0.1/compiler/2025.0/lib/pkgconfig:1:/cosma/local/likwid/intel_2025.0.1/5.4.1/lib/pkgconfig:1:/cosma/local/gsl/2.8/lib/pkgconfig:1:/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/lib/pkgconfig:1:/cosma/local/intel/oneAPI_2025.0.1/tbb/2022.0/lib/pkgconfig:1:/cosma/local/Python/3.12.4/lib/pkgconfig:1
+CMAKE_INCLUDE_PATH=/cosma/local/likwid/intel_2025.0.1/5.4.1/include:/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/include:/cosma/local/ucx/1.17.0/include:/cosma/local/Python/3.12.4/include/python3.12/:/cosma/local/gsl/2.8/include:/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/include:/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/include
+_LMFILES__modshare=/cosma/local/Modules/modulefiles/libraries/fftw/3.3.10:1:/cosma/local/intel/oneAPI_2025.0.1/modulefiles/umf/latest:1:/cosma/local/Modules/modulefiles/tools/python/3.12.4:1:/cosma/local/Modules/modulefiles/libraries/parmetis/4.0.3-64bit:1:/cosma/local/Modules/modulefiles/libraries/gsl/2.8:1:/cosma/local/intel/oneAPI_2025.0.1/modulefiles/compiler/latest:1:/cosma/local/Modules/modulefiles/compilers/intel_comp/2025.0.1:1:/cosma/local/intel/oneAPI_2025.0.1/modulefiles/compiler-rt/latest:1:/cosma/local/intel/oneAPI_2025.0.1/modulefiles/mpi/latest:1:/cosma/local/intel/oneAPI_2025.0.1/modulefiles/tbb/latest:1:/cosma/local/Modules/modulefiles/libraries/ucx/1.17.0:1:/cosma/local/Modules/modulefiles/tools/likwid/5.4.1:1:/cosma/local/Modules/modulefiles/tools/cosma/2024:1:/cosma/local/Modules/modulefiles/libraries/parallel_hdf5/1.14.4:1
+SLURM_CLUSTER_NAME=cosma7
+LIBRARY_PATH_modshare=/cosma/local/ucx/1.17.0/lib:1:/cosma/local/intel/oneAPI_2025.0.1/mpi/2021.14/opt/mpi/libfabric/lib:1:/cosma/local/intel/oneAPI_2025.0.1/mpi/2021.14/lib:1:/cosma/local/intel/oneAPI_2025.0.1/compiler/2025.0/lib:1:/cosma/local/intel/oneAPI_2025.0.1/umf/0.9/lib/:1:/cosma/local/likwid/intel_2025.0.1/5.4.1/lib:1:/cosma/local/gsl/2.8/lib:1:/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/lib:1:/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib:1:/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/lib:1:/cosma/local/intel/oneAPI_2025.0.1/tbb/2022.0/lib:1
+SLURM_JOB_END_TIME=1764105683
+NLSPATH_modshare=/cosma/local/intel/oneAPI_2025.0.1/compiler/2025.0/lib/compiler/locale/%l_%t/%N:1
+CPATH_modshare=/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/include:2:/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/include:1:/cosma/local/intel/oneAPI_2025.0.1/tbb/2022.0/include:1:/cosma/local/Python/3.12.4/include/python3.12/:1:/cosma/local/ucx/1.17.0/include:1:/cosma/local/intel/oneAPI_2025.0.1/mpi/2021.14/include:1:/cosma/local/intel/oneAPI_2025.0.1/umf/0.9/include/:1:/cosma/local/likwid/intel_2025.0.1/5.4.1/include:1:/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib:1:/cosma/local/gsl/2.8/include:1:/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/include:2
+SLURM_CPUS_ON_NODE=64
+FI_PROVIDER_PATH=/cosma/local/intel/oneAPI_2025.0.1/mpi/2021.14/opt/mpi/libfabric/lib/prov:/usr/lib64/libfabric
+DIAGUTIL_PATH=/cosma/local/intel/oneAPI_2025.0.1/compiler/2025.0/etc/compiler/sys_check/sys_check.sh
+SLURM_UMASK=0002
+SLURM_JOB_CPUS_PER_NODE=64
+__INTEL_POST_CFLAGS_modshare=-Wl,-rpath,/cosma/local/ucx/1.17.0/lib:1:-Wl,-rpath,/cosma/local/likwid/intel_2025.0.1/5.4.1/lib:1:-Wl,-rpath,/cosma/local/gsl/2.8/lib:1:-Wl,-rpath,/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/lib:1:-Wl,-rpath,/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib:1:-Wl,-rpath,/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/lib:1
+MANPATH_modshare=/usr/local/share/man:1:/cosma/local/intel/oneAPI_2025.0.1/mpi/2021.14/share/man:1:/usr/man:1:/cosma/local/intel/oneAPI_2025.0.1/compiler/2025.0/share/man:1:/cosma/local/likwid/intel_2025.0.1/5.4.1/bin:1:/opt/man:1:/usr/X11R6/man:1:/cosma/local/Modules/default/share/man:1:/usr/local/man:1:/cosma/local/Python/3.12.4/share/man:1:/usr/share/man:1:/var/lib/snapd/snap/man:1
+EDITOR=vi
+PYTHON_INCLUDE_PATH=/cosma/local/Python/3.12.4/include/python3.12
+_COSMA_SYS=intel_2025.0.1
+ENV=/cosma/local/Modules/default/init/profile.sh
+KRB5CCNAME=KCM:
+PWD=/snap8/scratch/dp004/dc-asif1/SWIFT_CPU_BENCH/pstb004
+PRTE_MCA_plm_slurm_args=--external-launcher
+SLURM_GTIDS=0
+LOGNAME=dc-asif1
+COSMA_7_OPT=-O3 -xSKYLAKE-AVX512
+XDG_SESSION_TYPE=tty
+SLURM_JOB_PARTITION=dine2
+MODULESHOME=/cosma/local/Modules/default
+MANPATH=/cosma/local/likwid/intel_2025.0.1/5.4.1/bin:/cosma/local/Python/3.12.4/share/man:/cosma/local/intel/oneAPI_2025.0.1/mpi/2021.14/share/man:/cosma/local/intel/oneAPI_2025.0.1/compiler/2025.0/share/man:/cosma/local/Modules/default/share/man:/usr/man:/usr/share/man:/usr/local/man:/usr/local/share/man:/usr/X11R6/man:/opt/man:/var/lib/snapd/snap/man
+mlwop=uol
+SLURM_JOB_NUM_NODES=1
+CXX=icpx
+SRUN_DEBUG=3
+SLURM_STEPID=0
+SLURM_CPU_BIND_LIST=0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+OMPI_FCFLAGS_modshare=-I/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib:2:-I/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/include:2:-I/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/include:2
+SLURM_JOBID=9056027
+SLURM_PTY_PORT=35503
+SLURM_LAUNCH_NODE_IPADDR=172.17.180.22
+SLURM_JOB_QOS=normal
+I_MPI_HYDRA_BOOTSTRAP_EXEC_EXTRA_ARGS=--external-launcher
+MOTD_SHOWN=pam
+LDFLAGS=-L/cosma/local/likwid/intel_2025.0.1/5.4.1/lib -Wl,-rpath,/cosma/local/likwid/intel_2025.0.1/5.4.1/lib -L/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib -Wl,-rpath,/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib -L/cosma/local/ucx/1.17.0/lib -Wl,-rpath,/cosma/local/ucx/1.17.0/lib -L/cosma/local/gsl/2.8/lib -Wl,-rpath,/cosma/local/gsl/2.8/lib -L/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/lib -Wl,-rpath,/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/lib -L/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/lib -Wl,-rpath,/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/lib
+SLURM_PTY_WIN_ROW=49
+HOME=/cosma/home/do009/dc-asif1
+MPI_CXX_OPTIONS=-I/cosma/local/likwid/intel_2025.0.1/5.4.1/include -L/cosma/local/likwid/intel_2025.0.1/5.4.1/lib -Wl,-rpath,/cosma/local/likwid/intel_2025.0.1/5.4.1/lib -I/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/include -L/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib -Wl,-rpath,/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib -I/cosma/local/ucx/1.17.0/include -L/cosma/local/ucx/1.17.0/lib -Wl,-rpath,/cosma/local/ucx/1.17.0/lib -I/cosma/local/Python/3.12.4/include/python3.12/ -I/cosma/local/gsl/2.8/include -L/cosma/local/gsl/2.8/lib -Wl,-rpath,/cosma/local/gsl/2.8/lib -I/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/include -L/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/lib -Wl,-rpath,/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/lib -I/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/include -L/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/lib -Wl,-rpath,/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/lib
+MPI_CXX_OPTIONS_modshare=-I/cosma/local/ucx/1.17.0/include:1:-Wl,-rpath,/cosma/local/ucx/1.17.0/lib:1:-L/cosma/local/likwid/intel_2025.0.1/5.4.1/lib:1:-L/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib:1:-L/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/lib:1:-I/cosma/local/likwid/intel_2025.0.1/5.4.1/include:1:-Wl,-rpath,/cosma/local/likwid/intel_2025.0.1/5.4.1/lib:1:-I/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/include:1:-L/cosma/local/ucx/1.17.0/lib:1:-Wl,-rpath,/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib:1:-L/cosma/local/gsl/2.8/lib:1:-I/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/include:1:-I/cosma/local/gsl/2.8/include:1:-Wl,-rpath,/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/lib:1:-Wl,-rpath,/cosma/local/gsl/2.8/lib:1:-I/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/include:1:-L/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/lib:1:-I/cosma/local/Python/3.12.4/include/python3.12/:1:-Wl,-rpath,/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/lib:1
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+LANG=en_GB.UTF-8
+MPI_F90_OPTIONS_modshare=-Wl,-rpath,/cosma/local/ucx/1.17.0/lib:1:-I/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib:1:-L/cosma/local/likwid/intel_2025.0.1/5.4.1/lib:1:-L/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/lib:1:-L/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib:1:-Wl,-rpath,/cosma/local/likwid/intel_2025.0.1/5.4.1/lib:1:-I/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/include:1:-L/cosma/local/ucx/1.17.0/lib:1:-L/cosma/local/gsl/2.8/lib:1:-Wl,-rpath,/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib:1:-I/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/include:1:-Wl,-rpath,/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/lib:1:-Wl,-rpath,/cosma/local/gsl/2.8/lib:1:-Wl,-rpath,/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/lib:1:-L/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/lib:1
+SLURM_CPU_BIND_TYPE=mask_cpu:
+LDFLAGS_modshare=-Wl,-rpath,/cosma/local/ucx/1.17.0/lib:1:-L/cosma/local/likwid/intel_2025.0.1/5.4.1/lib:1:-L/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/lib:1:-L/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib:1:-L/cosma/local/ucx/1.17.0/lib:1:-Wl,-rpath,/cosma/local/likwid/intel_2025.0.1/5.4.1/lib:1:-L/cosma/local/gsl/2.8/lib:1:-Wl,-rpath,/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib:1:-Wl,-rpath,/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/lib:1:-Wl,-rpath,/cosma/local/gsl/2.8/lib:1:-Wl,-rpath,/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/lib:1:-L/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/lib:1
+LD_LIBRARY_PATH_modshare=/cosma/local/Python/3.12.4/lib:1:/cosma/local/ucx/1.17.0/lib:1:/cosma/local/intel/oneAPI_2025.0.1/mpi/2021.14/opt/mpi/libfabric/lib:1:/cosma/local/intel/oneAPI_2025.0.1/mpi/2021.14/lib:1:/cosma/local/intel/oneAPI_2025.0.1/umf/0.9/lib/:1:/cosma/local/intel/oneAPI_2025.0.1/compiler/2025.0/opt/compiler/lib:1:/cosma/local/intel/oneAPI_2025.0.1/compiler/2025.0/lib:1:/cosma/local/intel/oneAPI_2025.0.1/tbb/2022.0/lib:1
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.m4a=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.oga=01;36:*.opus=01;36:*.spx=01;36:*.xspf=01;36:
+SLURMD_DEBUG=2
+MPI_CC_OPTIONS=-I/cosma/local/likwid/intel_2025.0.1/5.4.1/include -L/cosma/local/likwid/intel_2025.0.1/5.4.1/lib -Wl,-rpath,/cosma/local/likwid/intel_2025.0.1/5.4.1/lib -I/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/include -L/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib -Wl,-rpath,/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib -I/cosma/local/ucx/1.17.0/include -L/cosma/local/ucx/1.17.0/lib -Wl,-rpath,/cosma/local/ucx/1.17.0/lib -I/cosma/local/Python/3.12.4/include/python3.12/ -I/cosma/local/gsl/2.8/include -L/cosma/local/gsl/2.8/lib -Wl,-rpath,/cosma/local/gsl/2.8/lib -I/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/include -L/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/lib -Wl,-rpath,/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/lib -I/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/include -L/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/lib -Wl,-rpath,/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/lib
+SLURM_PROCID=0
+MPI_CC_OPTIONS_modshare=-I/cosma/local/ucx/1.17.0/include:1:-Wl,-rpath,/cosma/local/ucx/1.17.0/lib:1:-L/cosma/local/likwid/intel_2025.0.1/5.4.1/lib:1:-L/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib:1:-L/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/lib:1:-I/cosma/local/likwid/intel_2025.0.1/5.4.1/include:1:-Wl,-rpath,/cosma/local/likwid/intel_2025.0.1/5.4.1/lib:1:-I/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/include:1:-L/cosma/local/ucx/1.17.0/lib:1:-Wl,-rpath,/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib:1:-L/cosma/local/gsl/2.8/lib:1:-I/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/include:1:-I/cosma/local/gsl/2.8/include:1:-Wl,-rpath,/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/lib:1:-Wl,-rpath,/cosma/local/gsl/2.8/lib:1:-I/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/include:1:-L/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/lib:1:-I/cosma/local/Python/3.12.4/include/python3.12/:1:-Wl,-rpath,/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/lib:1
+_LMFILES_COMPILER_modshare=likwid:1:parmetis:1:parallel_hdf5:1:fftw:1
+_LMFILES_MPI=parallel_hdf5 fftw parmetis
+MPI_F77_OPTIONS_modshare=-Wl,-rpath,/cosma/local/ucx/1.17.0/lib:1:-I/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib:1:-L/cosma/local/likwid/intel_2025.0.1/5.4.1/lib:1:-L/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/lib:1:-L/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib:1:-Wl,-rpath,/cosma/local/likwid/intel_2025.0.1/5.4.1/lib:1:-I/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/include:1:-L/cosma/local/ucx/1.17.0/lib:1:-L/cosma/local/gsl/2.8/lib:1:-Wl,-rpath,/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib:1:-I/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/include:1:-Wl,-rpath,/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/lib:1:-Wl,-rpath,/cosma/local/gsl/2.8/lib:1:-Wl,-rpath,/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/lib:1:-L/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/lib:1
+TMPDIR=/tmp
+CMAKE_PREFIX_PATH=/cosma/local/intel/oneAPI_2025.0.1/compiler/2025.0:/cosma/local/intel/oneAPI_2025.0.1/umf/0.9:/cosma/local/intel/oneAPI_2025.0.1/tbb/2022.0
+CPPFLAGS=-I/cosma/local/likwid/intel_2025.0.1/5.4.1/include -I/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/include -I/cosma/local/ucx/1.17.0/include -I/cosma/local/Python/3.12.4/include/python3.12/ -I/cosma/local/gsl/2.8/include -I/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/include -I/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/include
+SLURM_NTASKS=1
+DIAGUTIL_PATH_modshare=/cosma/local/intel/oneAPI_2025.0.1/compiler/2025.0/etc/compiler/sys_check/sys_check.sh:2
+SLURM_TOPOLOGY_ADDR=gc002
+CMAKE_LIBRARY_PATH_modshare=/cosma/local/ucx/1.17.0/lib:1:/cosma/local/likwid/intel_2025.0.1/5.4.1/lib:1:/cosma/local/gsl/2.8/lib:1:/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/lib:1:/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib:1:/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/lib:1
+_LMFILES_MPI_modshare=parmetis:1:parallel_hdf5:1:fftw:1
+SSH_CONNECTION=90.241.3.77 51798 193.60.196.26 22
+LD_RUN_PATH_modshare=/cosma/local/ucx/1.17.0/lib:1:/cosma/local/likwid/intel_2025.0.1/5.4.1/lib:1:/cosma/local/gsl/2.8/lib:1:/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/lib:1:/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib:1:/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/lib:1
+__INTEL_POST_CFLAGS=-Wl,-rpath,/cosma/local/likwid/intel_2025.0.1/5.4.1/lib -Wl,-rpath,/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib -Wl,-rpath,/cosma/local/ucx/1.17.0/lib -Wl,-rpath,/cosma/local/gsl/2.8/lib -Wl,-rpath,/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/lib -Wl,-rpath,/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/lib
+OMPI_LDFLAGS_modshare=-Wl,-rpath,/cosma/local/ucx/1.17.0/lib:1:-L/cosma/local/likwid/intel_2025.0.1/5.4.1/lib:1:-L/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/lib:1:-L/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib:1:-L/cosma/local/ucx/1.17.0/lib:1:-Wl,-rpath,/cosma/local/likwid/intel_2025.0.1/5.4.1/lib:1:-L/cosma/local/gsl/2.8/lib:1:-Wl,-rpath,/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib:1:-Wl,-rpath,/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/lib:1:-Wl,-rpath,/cosma/local/gsl/2.8/lib:1:-Wl,-rpath,/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/lib:1:-L/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/lib:1
+CMPLR_ROOT=/cosma/local/intel/oneAPI_2025.0.1/compiler/2025.0
+MPI_F90_OPTIONS=-L/cosma/local/likwid/intel_2025.0.1/5.4.1/lib -Wl,-rpath,/cosma/local/likwid/intel_2025.0.1/5.4.1/lib -I/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/include -I/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib -L/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib -Wl,-rpath,/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib -L/cosma/local/ucx/1.17.0/lib -Wl,-rpath,/cosma/local/ucx/1.17.0/lib -L/cosma/local/gsl/2.8/lib -Wl,-rpath,/cosma/local/gsl/2.8/lib -I/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/include -L/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/lib -Wl,-rpath,/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/lib -L/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/lib -Wl,-rpath,/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/lib
+HYDRA_BOOTSTRAP=slurm
+I_MPI_CXX=icpx
+LIKWID_INC=/cosma/local/likwid/intel_2025.0.1/5.4.1/include
+PATH_modshare=/cosma/local/bin/system:1:/usr/bin:1:/cosma/local/intel/oneAPI_2025.0.1/mpi/2021.14/bin:1:/usr/local/bin:1:/cosma/local/likwid/intel_2025.0.1/5.4.1/bin:1:/cosma/local/bin:1:/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/bin:1:/cosma/home/do009/dc-asif1/opt/mc3_general/bin:1:/cosma/local/gcc/11.1.0/bin/:1:/cosma/local/likwid/intel_2025.0.1/5.4.1/sbin:1:/cosma/local/intel/oneAPI_2025.0.1/compiler/2025.0/bin:1:/cosma/local/Modules/default/bin:1:/cosma/home/do009/dc-asif1/MyLinux/scripts:1:/cosma/local/gsl/2.8/bin:1:/cosma/home/do009/dc-asif1/.vim/plugged/fzf/bin:1:/cosma/local/Python/3.12.4/bin:1:/usr/sbin:1:/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/bin:1:/usr/local/sbin:1:/cosma/local/ucx/1.17.0/bin:1:/cosma/local/intel/oneAPI_2025.0.1/mpi/2021.14/opt/mpi/libfabric/bin:1
+SLURM_TOPOLOGY_ADDR_PATTERN=node
+SLURM_SRUN_COMM_HOST=172.17.180.22
+MODULEPATH_modshare=/cosma/local/Modules/modulefiles/tools:1:/cosma/local/Modules/modulefiles/libraries:1:/cosma/local/Modules/modulefiles/versions:1:/cosma/local/Modules/modulefiles/MAD:1:/cosma/local/Modules/modulefiles/compilers:1:/cosma/local/Modules/modulefiles/mpi:1:/cosma/local/intel/oneAPI_2025.0.1/modulefiles:1
+XDG_SESSION_CLASS=user
+SLURM_SCRIPT_CONTEXT=prolog_task
+LOADEDMODULES_modshare=parallel_hdf5/1.14.4:1:likwid/5.4.1:1:cosma/2024:1:umf/latest:1:parmetis/4.0.3-64bit:1:intel_comp/2025.0.1:1:compiler/latest:1:fftw/3.3.10:1:compiler-rt/latest:1:mpi/latest:1:tbb/latest:1:ucx/1.17.0:1:gsl/2.8:1:python/3.12.4:1
+PYTHON_LIBRARIES=/cosma/local/Python/3.12.4/lib/libpython3.12.so
+TERM=screen
+F77=ifx
+SLURM_PTY_WIN_COL=206
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+USER=dc-asif1
+UMF_ROOT=/cosma/local/intel/oneAPI_2025.0.1/umf/0.9
+TMUX_PANE=%25
+I_MPI_F90=ifx
+LIBRARY_PATH=/cosma/local/likwid/intel_2025.0.1/5.4.1/lib:/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib:/cosma/local/ucx/1.17.0/lib:/cosma/local/gsl/2.8/lib:/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/lib:/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/lib:/cosma/local/intel/oneAPI_2025.0.1/mpi/2021.14/opt/mpi/libfabric/lib:/cosma/local/intel/oneAPI_2025.0.1/mpi/2021.14/lib:/cosma/local/intel/oneAPI_2025.0.1/compiler/2025.0/lib:/cosma/local/intel/oneAPI_2025.0.1/umf/0.9/lib/:/cosma/local/intel/oneAPI_2025.0.1/tbb/2022.0/lib
+SLURM_NODELIST=gc002
+__INTEL_POST_FFLAGS=-Wl,-rpath,/cosma/local/likwid/intel_2025.0.1/5.4.1/lib -Wl,-rpath,/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib -Wl,-rpath,/cosma/local/ucx/1.17.0/lib -Wl,-rpath,/cosma/local/gsl/2.8/lib -Wl,-rpath,/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/lib -Wl,-rpath,/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/lib
+mlplt=cosma
+SLURM_SRUN_COMM_PORT=44191
+OMPI_CPPFLAGS_modshare=-I/cosma/local/ucx/1.17.0/include:1:-I/cosma/local/likwid/intel_2025.0.1/5.4.1/include:1:-I/cosma/local/gsl/2.8/include:1:-I/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/include:1:-I/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/include:1:-I/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/include:1:-I/cosma/local/Python/3.12.4/include/python3.12/:1
+__INTEL_POST_FFLAGS_modshare=-Wl,-rpath,/cosma/local/ucx/1.17.0/lib:1:-Wl,-rpath,/cosma/local/likwid/intel_2025.0.1/5.4.1/lib:1:-Wl,-rpath,/cosma/local/gsl/2.8/lib:1:-Wl,-rpath,/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/lib:1:-Wl,-rpath,/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib:1:-Wl,-rpath,/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/lib:1
+LOADEDMODULES=cosma/2024:intel_comp/2025.0.1:compiler-rt/latest:tbb/latest:umf/latest:compiler/latest:mpi/latest:parmetis/4.0.3-64bit:fftw/3.3.10:gsl/2.8:python/3.12.4:ucx/1.17.0:parallel_hdf5/1.14.4:likwid/5.4.1
+SLURM_STEP_ID=0
+F90=ifx
+SLURM_JOB_ACCOUNT=do015
+SLURM_PRIO_PROCESS=0
+SLURM_NPROCS=1
+DISPLAY=localhost:31.0
+_LMFILES_COMPILER=likwid parallel_hdf5 fftw parmetis
+SHLVL=5
+SLURM_NNODES=1
+LD_RUN_PATH=/cosma/local/likwid/intel_2025.0.1/5.4.1/lib:/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib:/cosma/local/ucx/1.17.0/lib:/cosma/local/gsl/2.8/lib:/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/lib:/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/lib
+BASH_ENV=/cosma/local/Modules/default/init/bash
+F9X=ifx
+CLASSPATH_modshare=/cosma/local/intel/oneAPI_2025.0.1/mpi/2021.14/share/java/mpi.jar:1
+OCL_ICD_FILENAMES=/cosma/local/intel/oneAPI_2025.0.1/compiler/2025.0/lib/libintelocl.so
+CVS_RSH=ssh
+XDG_SESSION_ID=10257
+_COSMA_MPI=intel_mpi_2025.0.1
+SLURM_SUBMIT_HOST=login8b.pri.cosma.local
+OMPI_FCFLAGS=-I/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/include -I/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib -I/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/include
+CLASSPATH=/cosma/local/intel/oneAPI_2025.0.1/mpi/2021.14/share/java/mpi.jar
+HDF5_HOME=/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4
+LD_LIBRARY_PATH=/cosma/local/ucx/1.17.0/lib:/cosma/local/Python/3.12.4/lib:/cosma/local/intel/oneAPI_2025.0.1/mpi/2021.14/opt/mpi/libfabric/lib:/cosma/local/intel/oneAPI_2025.0.1/mpi/2021.14/lib:/cosma/local/intel/oneAPI_2025.0.1/umf/0.9/lib/:/cosma/local/intel/oneAPI_2025.0.1/tbb/2022.0/lib:/cosma/local/intel/oneAPI_2025.0.1/compiler/2025.0/opt/compiler/lib:/cosma/local/intel/oneAPI_2025.0.1/compiler/2025.0/lib
+XDG_RUNTIME_DIR=/run/user/22100
+SLURM_JOB_ID=9056027
+SLURM_NODEID=0
+OCL_ICD_FILENAMES_modshare=/cosma/local/intel/oneAPI_2025.0.1/compiler/2025.0/lib/libintelocl.so:1
+S_COLORS=auto
+SLURM_STEP_NUM_NODES=1
+F90_MODULE_FLAGS=-I/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/include -I/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib -I/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/include
+SSH_CLIENT=90.241.3.77 62613 22
+COSMA_ALL_OPT=-O3 -mavx
+DEBUGINFOD_URLS=https://debuginfod.rockylinux.org/ 
+OMP_NUM_THREADS=64
+DEBUGINFOD_IMA_CERT_PATH=/etc/keys/ima:
+LIKWID_INC_modshare=/cosma/local/likwid/intel_2025.0.1/5.4.1/include:1
+FC=ifx
+OMPI_CPPFLAGS=-I/cosma/local/likwid/intel_2025.0.1/5.4.1/include -I/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/include -I/cosma/local/ucx/1.17.0/include -I/cosma/local/Python/3.12.4/include/python3.12/ -I/cosma/local/gsl/2.8/include -I/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/include -I/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/include
+which_declare=declare -f
+KDEDIRS=/usr
+SLURM_STEP_TASKS_PER_NODE=1
+LIKWID_LIB_modshare=/cosma/local/likwid/intel_2025.0.1/5.4.1/lib:1
+XDG_DATA_DIRS=/cosma/home/do009/dc-asif1/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+NLSPATH=/cosma/local/intel/oneAPI_2025.0.1/compiler/2025.0/lib/compiler/locale/%l_%t/%N
+SLURM_CONF=/etc/slurm/slurm.conf
+PATH=/cosma/local/likwid/intel_2025.0.1/5.4.1/bin:/cosma/local/likwid/intel_2025.0.1/5.4.1/sbin:/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/bin:/cosma/local/ucx/1.17.0/bin:/cosma/local/Python/3.12.4/bin:/cosma/local/gsl/2.8/bin:/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/bin:/cosma/local/intel/oneAPI_2025.0.1/mpi/2021.14/opt/mpi/libfabric/bin:/cosma/local/intel/oneAPI_2025.0.1/mpi/2021.14/bin:/cosma/local/gcc/11.1.0/bin/:/cosma/local/intel/oneAPI_2025.0.1/compiler/2025.0/bin:/cosma/home/do009/dc-asif1/.vim/plugged/fzf/bin:/cosma/home/do009/dc-asif1/opt/mc3_general/bin:/cosma/home/do009/dc-asif1/MyLinux/scripts:/cosma/home/do009/dc-asif1/.vim/plugged/fzf/bin:/cosma/home/do009/dc-asif1/opt/mc3_general/bin:/cosma/home/do009/dc-asif1/MyLinux/scripts:/cosma/local/bin/system:/cosma/local/bin:/cosma/home/do009/dc-asif1/.vim/plugged/fzf/bin:/cosma/home/do009/dc-asif1/opt/mc3_general/bin:/cosma/home/do009/dc-asif1/MyLinux/scripts:/cosma/local/Modules/default/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
+SLURM_JOB_NAME=bash
+F90_MODULE_FLAGS_modshare=-I/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib:2:-I/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/include:2:-I/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/include:2
+MODULEPATH=/cosma/local/intel/oneAPI_2025.0.1/modulefiles:/cosma/local/Modules/modulefiles/mpi:/cosma/local/Modules/modulefiles/versions:/cosma/local/Modules/modulefiles/compilers:/cosma/local/Modules/modulefiles/libraries:/cosma/local/Modules/modulefiles/tools:/cosma/local/Modules/modulefiles/MAD
+LIKWID_LIB=/cosma/local/likwid/intel_2025.0.1/5.4.1/lib
+CC=icx
+PYTHON_MAJMIN=3.12
+HISTFILESIZE=
+_LMFILES_=/cosma/local/Modules/modulefiles/tools/cosma/2024:/cosma/local/Modules/modulefiles/compilers/intel_comp/2025.0.1:/cosma/local/intel/oneAPI_2025.0.1/modulefiles/compiler-rt/latest:/cosma/local/intel/oneAPI_2025.0.1/modulefiles/tbb/latest:/cosma/local/intel/oneAPI_2025.0.1/modulefiles/umf/latest:/cosma/local/intel/oneAPI_2025.0.1/modulefiles/compiler/latest:/cosma/local/intel/oneAPI_2025.0.1/modulefiles/mpi/latest:/cosma/local/Modules/modulefiles/libraries/parmetis/4.0.3-64bit:/cosma/local/Modules/modulefiles/libraries/fftw/3.3.10:/cosma/local/Modules/modulefiles/libraries/gsl/2.8:/cosma/local/Modules/modulefiles/tools/python/3.12.4:/cosma/local/Modules/modulefiles/libraries/ucx/1.17.0:/cosma/local/Modules/modulefiles/libraries/parallel_hdf5/1.14.4:/cosma/local/Modules/modulefiles/tools/likwid/5.4.1
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/22100/bus
+OMPI_LDFLAGS=-L/cosma/local/likwid/intel_2025.0.1/5.4.1/lib -Wl,-rpath,/cosma/local/likwid/intel_2025.0.1/5.4.1/lib -L/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib -Wl,-rpath,/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib -L/cosma/local/ucx/1.17.0/lib -Wl,-rpath,/cosma/local/ucx/1.17.0/lib -L/cosma/local/gsl/2.8/lib -Wl,-rpath,/cosma/local/gsl/2.8/lib -L/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/lib -Wl,-rpath,/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/lib -L/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/lib -Wl,-rpath,/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/lib
+COSMA_8_OPT=-O3 -march=core-avx2
+CMAKE_PREFIX_PATH_modshare=/cosma/local/intel/oneAPI_2025.0.1/umf/0.9:1:/cosma/local/intel/oneAPI_2025.0.1/tbb/2022.0:1:/cosma/local/intel/oneAPI_2025.0.1/compiler/2025.0:1
+MAIL=/var/spool/mail/dc-asif1
+SSH_TTY=/dev/pts/50
+SLURM_JOB_GROUP=do009
+MPI_F77_OPTIONS=-L/cosma/local/likwid/intel_2025.0.1/5.4.1/lib -Wl,-rpath,/cosma/local/likwid/intel_2025.0.1/5.4.1/lib -I/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/include -I/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib -L/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib -Wl,-rpath,/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib -L/cosma/local/ucx/1.17.0/lib -Wl,-rpath,/cosma/local/ucx/1.17.0/lib -L/cosma/local/gsl/2.8/lib -Wl,-rpath,/cosma/local/gsl/2.8/lib -I/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/include -L/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/lib -Wl,-rpath,/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/lib -L/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/lib -Wl,-rpath,/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/lib
+SLURM_STEP_LAUNCHER_PORT=44191
+OMPI_MCA_plm_slurm_args=--external-launcher
+SLURM_JOB_GID=20243
+CPATH=/cosma/local/likwid/intel_2025.0.1/5.4.1/include:/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib:/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/include:/cosma/local/ucx/1.17.0/include:/cosma/local/Python/3.12.4/include/python3.12/:/cosma/local/gsl/2.8/include:/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/include:/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/include:/cosma/local/intel/oneAPI_2025.0.1/mpi/2021.14/include:/cosma/local/intel/oneAPI_2025.0.1/umf/0.9/include/:/cosma/local/intel/oneAPI_2025.0.1/tbb/2022.0/include
+CPPFLAGS_modshare=-I/cosma/local/ucx/1.17.0/include:1:-I/cosma/local/likwid/intel_2025.0.1/5.4.1/include:1:-I/cosma/local/gsl/2.8/include:1:-I/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/include:1:-I/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/include:1:-I/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/include:1:-I/cosma/local/Python/3.12.4/include/python3.12/:1
+OLDPWD=/snap8/scratch/dp004/dc-asif1/SWIFT_CPU_BENCH
+CMAKE_LIBRARY_PATH=/cosma/local/likwid/intel_2025.0.1/5.4.1/lib:/cosma/local/parallel-hdf5//intel_2025.0.1_intel_mpi_2025.0.1/1.14.4/lib:/cosma/local/ucx/1.17.0/lib:/cosma/local/gsl/2.8/lib:/cosma/local/fftw//intel_2025.0.1_intel_mpi_2025.0.1/3.3.10/lib:/cosma/local/parmetis/intel_2025.0.1_intel_mpi_2025.0.1/4.0.3-64bit/lib
+SLURM_JOB_NODELIST=gc002
+MODULES_CMD=/cosma/local/Modules/default/libexec/modulecmd.tcl
+TERM_PROGRAM=tmux
+I_MPI_HYDRA_BOOTSTRAP=slurm
+BASH_FUNC_switchml%%=() {  typeset swfound=1;
+ if [ "${MODULES_USE_COMPAT_VERSION:-0}" = '1' ]; then
+ typeset swname='main';
+ if [ -e /cosma/local/Modules/default/libexec/modulecmd.tcl ]; then
+ typeset swfound=0;
+ unset MODULES_USE_COMPAT_VERSION;
+ fi;
+ else
+ typeset swname='compatibility';
+ if [ -e /cosma/local/Modules/default/libexec/modulecmd-compat ]; then
+ typeset swfound=0;
+ MODULES_USE_COMPAT_VERSION=1;
+ export MODULES_USE_COMPAT_VERSION;
+ fi;
+ fi;
+ if [ $swfound -eq 0 ]; then
+ echo "Switching to Modules $swname version";
+ source /cosma/local/Modules/default/init/bash;
+ else
+ echo "Cannot switch to Modules $swname version, command not found";
+ return 1;
+ fi
+}
+BASH_FUNC_which%%=() {  ( alias;
+ eval ${which_declare} ) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot $@
+}
+BASH_FUNC_module%%=() {  unset _mlre _mlIFS _mlshdbg;
+ if [ "${MODULES_SILENT_SHELL_DEBUG:-0}" = '1' ]; then
+ case "$-" in 
+ *v*x*)
+ set +vx;
+ _mlshdbg='vx'
+ ;;
+ *v*)
+ set +v;
+ _mlshdbg='v'
+ ;;
+ *x*)
+ set +x;
+ _mlshdbg='x'
+ ;;
+ *)
+ _mlshdbg=''
+ ;;
+ esac;
+ fi;
+ if [ -n "${IFS+x}" ]; then
+ _mlIFS=$IFS;
+ fi;
+ IFS=' ';
+ for _mlv in ${MODULES_RUN_QUARANTINE:-};
+ do
+ if [ "${_mlv}" = "${_mlv##*[!A-Za-z0-9_]}" -a "${_mlv}" = "${_mlv#[0-9]}" ]; then
+ if [ -n "`eval 'echo ${'$_mlv'+x}'`" ]; then
+ _mlre="${_mlre:-}${_mlv}_modquar='`eval 'echo ${'$_mlv'}'`' ";
+ fi;
+ _mlrv="MODULES_RUNENV_${_mlv}";
+ _mlre="${_mlre:-}${_mlv}='`eval 'echo ${'$_mlrv':-}'`' ";
+ fi;
+ done;
+ if [ -n "${_mlre:-}" ]; then
+ eval `eval ${_mlre}/usr/bin/tclsh /cosma/local/Modules/default/libexec/modulecmd.tcl bash '"$@"'`;
+ else
+ eval `/usr/bin/tclsh /cosma/local/Modules/default/libexec/modulecmd.tcl bash "$@"`;
+ fi;
+ _mlstatus=$?;
+ if [ -n "${_mlIFS+x}" ]; then
+ IFS=$_mlIFS;
+ else
+ unset IFS;
+ fi;
+ if [ -n "${_mlshdbg:-}" ]; then
+ set -$_mlshdbg;
+ fi;
+ unset _mlre _mlv _mlrv _mlIFS _mlshdbg;
+ return $_mlstatus
+}
+BASH_FUNC__moduleraw%%=() {  unset _mlre _mlIFS _mlshdbg;
+ if [ "${MODULES_SILENT_SHELL_DEBUG:-0}" = '1' ]; then
+ case "$-" in 
+ *v*x*)
+ set +vx;
+ _mlshdbg='vx'
+ ;;
+ *v*)
+ set +v;
+ _mlshdbg='v'
+ ;;
+ *x*)
+ set +x;
+ _mlshdbg='x'
+ ;;
+ *)
+ _mlshdbg=''
+ ;;
+ esac;
+ fi;
+ if [ -n "${IFS+x}" ]; then
+ _mlIFS=$IFS;
+ fi;
+ IFS=' ';
+ for _mlv in ${MODULES_RUN_QUARANTINE:-};
+ do
+ if [ "${_mlv}" = "${_mlv##*[!A-Za-z0-9_]}" -a "${_mlv}" = "${_mlv#[0-9]}" ]; then
+ if [ -n "`eval 'echo ${'$_mlv'+x}'`" ]; then
+ _mlre="${_mlre:-}${_mlv}_modquar='`eval 'echo ${'$_mlv'}'`' ";
+ fi;
+ _mlrv="MODULES_RUNENV_${_mlv}";
+ _mlre="${_mlre:-}${_mlv}='`eval 'echo ${'$_mlrv':-}'`' ";
+ fi;
+ done;
+ if [ -n "${_mlre:-}" ]; then
+ eval `eval ${_mlre}/usr/bin/tclsh /cosma/local/Modules/default/libexec/modulecmd.tcl bash '"$@"'`;
+ else
+ eval `/usr/bin/tclsh /cosma/local/Modules/default/libexec/modulecmd.tcl bash "$@"`;
+ fi;
+ _mlstatus=$?;
+ if [ -n "${_mlIFS+x}" ]; then
+ IFS=$_mlIFS;
+ else
+ unset IFS;
+ fi;
+ if [ -n "${_mlshdbg:-}" ]; then
+ set -$_mlshdbg;
+ fi;
+ unset _mlre _mlv _mlrv _mlIFS _mlshdbg;
+ return $_mlstatus
+}
+_=/usr/bin/env
+/cosma/local/gcc/11.1.0/bin/gcc
+Using built-in specs.
+COLLECT_GCC=gcc
+COLLECT_LTO_WRAPPER=/cosma/local/gcc/11.1.0/libexec/gcc/x86_64-pc-linux-gnu/11.1.0/lto-wrapper
+Target: x86_64-pc-linux-gnu
+Configured with: ../configure --prefix=/cosma/local/gcc/11.1.0 --enable-languages=c,c++,fortran --disable-multilib
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 11.1.0 (GCC) 
+if [[ $run_procs == "seq" ]]; then
+  procs=${run_procs}-$(printf "%03d" $run_threads)
+else
+  procs=$(printf "%03d" $run_procs)-$(printf "%03d" $run_threads)
+fi
++ [[ seq == \s\e\q ]]
+++ printf %03d 64
++ procs=seq-064
+work="${framework}_${platform}_${procs}_${config}_${testcase}"
++ work=lkd_cosma8-dine2-intel_seq-064_n1-lwpcFA-lwb-0032+pda5f_deft59
+mkdir -p $work; cd $work
++ mkdir -p lkd_cosma8-dine2-intel_seq-064_n1-lwpcFA-lwb-0032+pda5f_deft59
++ cd lkd_cosma8-dine2-intel_seq-064_n1-lwpcFA-lwb-0032+pda5f_deft59
+te=$(date +%s)
+++ date +%s
++ te=1764080584
+tS=$((te-ts))
++ tS=1
+
+## Compile
+ts=$(date +%s)
+++ date +%s
++ ts=1764080584
+
+## Config
+likwid-powermeter -i
++ likwid-powermeter -i
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Gold 6430
+CPU type:	Intel SapphireRapids processor
+CPU clock:	2.10 GHz
+--------------------------------------------------------------------------------
+Base clock:	2100.00 MHz
+Minimal clock:	800.00 MHz
+Turbo Boost Steps:
+C0 3400.00 MHz
+C1 3400.00 MHz
+C2 3400.00 MHz
+C3 3400.00 MHz
+C4 3400.00 MHz
+C5 3400.00 MHz
+C6 3400.00 MHz
+C7 3400.00 MHz
+C8 3400.00 MHz
+C9 3400.00 MHz
+C10 3400.00 MHz
+C11 3400.00 MHz
+C12 3400.00 MHz
+C13 3400.00 MHz
+C14 3400.00 MHz
+C15 3400.00 MHz
+C16 3100.00 MHz
+C17 3100.00 MHz
+C18 3100.00 MHz
+C19 3100.00 MHz
+C20 3000.00 MHz
+C21 3000.00 MHz
+C22 2800.00 MHz
+C23 2800.00 MHz
+C24 2800.00 MHz
+C25 2800.00 MHz
+C26 2700.00 MHz
+C27 2700.00 MHz
+C28 2600.00 MHz
+C29 2600.00 MHz
+C30 2600.00 MHz
+C31 2600.00 MHz
+--------------------------------------------------------------------------------
+Info for RAPL domain PKG:
+Thermal Spec Power: 270 Watt
+Minimum Power: 181 Watt
+Maximum Power: 270 Watt
+Maximum Time Window: 39040 micro sec
+
+Info for RAPL domain DRAM:
+Thermal Spec Power: 122 Watt
+Minimum Power: 15 Watt
+Maximum Power: 122 Watt
+Maximum Time Window: 117120 micro sec
+
+Info for RAPL domain PLATFORM:
+Thermal Spec Power: 672 Watt
+Minimum Power: 0 Watt
+Maximum Power: 672 Watt
+Maximum Time Window: 976 micro sec
+
+Info about Uncore:
+Minimal Uncore frequency: 800 MHz
+Maximal Uncore frequency: 2400 MHz
+
+Performance energy bias: 7 (0=highest performance, 15 = lowest energy)
+
+--------------------------------------------------------------------------------
+likwid-topology
++ likwid-topology
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Gold 6430
+CPU type:	Intel SapphireRapids processor
+CPU stepping:	8
+********************************************************************************
+Hardware Thread Topology
+********************************************************************************
+Sockets:		2
+CPU dies:		2
+Cores per socket:	32
+Threads per core:	2
+--------------------------------------------------------------------------------
+HWThread        Thread        Core        Die        Socket        Available
+0               0             0           0          0             *                
+1               0             32          0          1             *                
+2               0             1           0          0             *                
+3               0             33          0          1             *                
+4               0             2           0          0             *                
+5               0             34          0          1             *                
+6               0             3           0          0             *                
+7               0             35          0          1             *                
+8               0             4           0          0             *                
+9               0             36          0          1             *                
+10              0             5           0          0             *                
+11              0             37          0          1             *                
+12              0             6           0          0             *                
+13              0             38          0          1             *                
+14              0             7           0          0             *                
+15              0             39          0          1             *                
+16              0             8           0          0             *                
+17              0             40          0          1             *                
+18              0             9           0          0             *                
+19              0             41          0          1             *                
+20              0             10          0          0             *                
+21              0             42          0          1             *                
+22              0             11          0          0             *                
+23              0             43          0          1             *                
+24              0             12          0          0             *                
+25              0             44          0          1             *                
+26              0             13          0          0             *                
+27              0             45          0          1             *                
+28              0             14          0          0             *                
+29              0             46          0          1             *                
+30              0             15          0          0             *                
+31              0             47          0          1             *                
+32              0             16          0          0             *                
+33              0             48          0          1             *                
+34              0             17          0          0             *                
+35              0             49          0          1             *                
+36              0             18          0          0             *                
+37              0             50          0          1             *                
+38              0             19          0          0             *                
+39              0             51          0          1             *                
+40              0             20          0          0             *                
+41              0             52          0          1             *                
+42              0             21          0          0             *                
+43              0             53          0          1             *                
+44              0             22          0          0             *                
+45              0             54          0          1             *                
+46              0             23          0          0             *                
+47              0             55          0          1             *                
+48              0             24          0          0             *                
+49              0             56          0          1             *                
+50              0             25          0          0             *                
+51              0             57          0          1             *                
+52              0             26          0          0             *                
+53              0             58          0          1             *                
+54              0             27          0          0             *                
+55              0             59          0          1             *                
+56              0             28          0          0             *                
+57              0             60          0          1             *                
+58              0             29          0          0             *                
+59              0             61          0          1             *                
+60              0             30          0          0             *                
+61              0             62          0          1             *                
+62              0             31          0          0             *                
+63              0             63          0          1             *                
+64              1             0           0          0             *                
+65              1             32          0          1             *                
+66              1             1           0          0             *                
+67              1             33          0          1             *                
+68              1             2           0          0             *                
+69              1             34          0          1             *                
+70              1             3           0          0             *                
+71              1             35          0          1             *                
+72              1             4           0          0             *                
+73              1             36          0          1             *                
+74              1             5           0          0             *                
+75              1             37          0          1             *                
+76              1             6           0          0             *                
+77              1             38          0          1             *                
+78              1             7           0          0             *                
+79              1             39          0          1             *                
+80              1             8           0          0             *                
+81              1             40          0          1             *                
+82              1             9           0          0             *                
+83              1             41          0          1             *                
+84              1             10          0          0             *                
+85              1             42          0          1             *                
+86              1             11          0          0             *                
+87              1             43          0          1             *                
+88              1             12          0          0             *                
+89              1             44          0          1             *                
+90              1             13          0          0             *                
+91              1             45          0          1             *                
+92              1             14          0          0             *                
+93              1             46          0          1             *                
+94              1             15          0          0             *                
+95              1             47          0          1             *                
+96              1             16          0          0             *                
+97              1             48          0          1             *                
+98              1             17          0          0             *                
+99              1             49          0          1             *                
+100             1             18          0          0             *                
+101             1             50          0          1             *                
+102             1             19          0          0             *                
+103             1             51          0          1             *                
+104             1             20          0          0             *                
+105             1             52          0          1             *                
+106             1             21          0          0             *                
+107             1             53          0          1             *                
+108             1             22          0          0             *                
+109             1             54          0          1             *                
+110             1             23          0          0             *                
+111             1             55          0          1             *                
+112             1             24          0          0             *                
+113             1             56          0          1             *                
+114             1             25          0          0             *                
+115             1             57          0          1             *                
+116             1             26          0          0             *                
+117             1             58          0          1             *                
+118             1             27          0          0             *                
+119             1             59          0          1             *                
+120             1             28          0          0             *                
+121             1             60          0          1             *                
+122             1             29          0          0             *                
+123             1             61          0          1             *                
+124             1             30          0          0             *                
+125             1             62          0          1             *                
+126             1             31          0          0             *                
+127             1             63          0          1             *                
+--------------------------------------------------------------------------------
+Socket 0:		( 0 64 2 66 4 68 6 70 8 72 10 74 12 76 14 78 16 80 18 82 20 84 22 86 24 88 26 90 28 92 30 94 32 96 34 98 36 100 38 102 40 104 42 106 44 108 46 110 48 112 50 114 52 116 54 118 56 120 58 122 60 124 62 126 )
+Socket 1:		( 1 65 3 67 5 69 7 71 9 73 11 75 13 77 15 79 17 81 19 83 21 85 23 87 25 89 27 91 29 93 31 95 33 97 35 99 37 101 39 103 41 105 43 107 45 109 47 111 49 113 51 115 53 117 55 119 57 121 59 123 61 125 63 127 )
+--------------------------------------------------------------------------------
+********************************************************************************
+Cache Topology
+********************************************************************************
+Level:			1
+Size:			48 kB
+Cache groups:		( 0 64 ) ( 2 66 ) ( 4 68 ) ( 6 70 ) ( 8 72 ) ( 10 74 ) ( 12 76 ) ( 14 78 ) ( 16 80 ) ( 18 82 ) ( 20 84 ) ( 22 86 ) ( 24 88 ) ( 26 90 ) ( 28 92 ) ( 30 94 ) ( 32 96 ) ( 34 98 ) ( 36 100 ) ( 38 102 ) ( 40 104 ) ( 42 106 ) ( 44 108 ) ( 46 110 ) ( 48 112 ) ( 50 114 ) ( 52 116 ) ( 54 118 ) ( 56 120 ) ( 58 122 ) ( 60 124 ) ( 62 126 ) ( 1 65 ) ( 3 67 ) ( 5 69 ) ( 7 71 ) ( 9 73 ) ( 11 75 ) ( 13 77 ) ( 15 79 ) ( 17 81 ) ( 19 83 ) ( 21 85 ) ( 23 87 ) ( 25 89 ) ( 27 91 ) ( 29 93 ) ( 31 95 ) ( 33 97 ) ( 35 99 ) ( 37 101 ) ( 39 103 ) ( 41 105 ) ( 43 107 ) ( 45 109 ) ( 47 111 ) ( 49 113 ) ( 51 115 ) ( 53 117 ) ( 55 119 ) ( 57 121 ) ( 59 123 ) ( 61 125 ) ( 63 127 )
+--------------------------------------------------------------------------------
+Level:			2
+Size:			2 MB
+Cache groups:		( 0 64 ) ( 2 66 ) ( 4 68 ) ( 6 70 ) ( 8 72 ) ( 10 74 ) ( 12 76 ) ( 14 78 ) ( 16 80 ) ( 18 82 ) ( 20 84 ) ( 22 86 ) ( 24 88 ) ( 26 90 ) ( 28 92 ) ( 30 94 ) ( 32 96 ) ( 34 98 ) ( 36 100 ) ( 38 102 ) ( 40 104 ) ( 42 106 ) ( 44 108 ) ( 46 110 ) ( 48 112 ) ( 50 114 ) ( 52 116 ) ( 54 118 ) ( 56 120 ) ( 58 122 ) ( 60 124 ) ( 62 126 ) ( 1 65 ) ( 3 67 ) ( 5 69 ) ( 7 71 ) ( 9 73 ) ( 11 75 ) ( 13 77 ) ( 15 79 ) ( 17 81 ) ( 19 83 ) ( 21 85 ) ( 23 87 ) ( 25 89 ) ( 27 91 ) ( 29 93 ) ( 31 95 ) ( 33 97 ) ( 35 99 ) ( 37 101 ) ( 39 103 ) ( 41 105 ) ( 43 107 ) ( 45 109 ) ( 47 111 ) ( 49 113 ) ( 51 115 ) ( 53 117 ) ( 55 119 ) ( 57 121 ) ( 59 123 ) ( 61 125 ) ( 63 127 )
+--------------------------------------------------------------------------------
+Level:			3
+Size:			60 MB
+Cache groups:		( 0 64 2 66 4 68 6 70 8 72 10 74 12 76 14 78 16 80 18 82 20 84 22 86 24 88 26 90 28 92 30 94 32 96 34 98 36 100 38 102 40 104 42 106 44 108 46 110 48 112 50 114 52 116 54 118 56 120 58 122 60 124 62 126 ) ( 1 65 3 67 5 69 7 71 9 73 11 75 13 77 15 79 17 81 19 83 21 85 23 87 25 89 27 91 29 93 31 95 33 97 35 99 37 101 39 103 41 105 43 107 45 109 47 111 49 113 51 115 53 117 55 119 57 121 59 123 61 125 63 127 )
+--------------------------------------------------------------------------------
+********************************************************************************
+NUMA Topology
+********************************************************************************
+NUMA domains:		2
+--------------------------------------------------------------------------------
+Domain:			0
+Processors:		( 0 64 2 66 4 68 6 70 8 72 10 74 12 76 14 78 16 80 18 82 20 84 22 86 24 88 26 90 28 92 30 94 32 96 34 98 36 100 38 102 40 104 42 106 44 108 46 110 48 112 50 114 52 116 54 118 56 120 58 122 60 124 62 126 )
+Distances:		10 21
+Free memory:		1.02637e+06 MB
+Total memory:		1.0315e+06 MB
+--------------------------------------------------------------------------------
+Domain:			1
+Processors:		( 1 65 3 67 5 69 7 71 9 73 11 75 13 77 15 79 17 81 19 83 21 85 23 87 25 89 27 91 29 93 31 95 33 97 35 99 37 101 39 103 41 105 43 107 45 109 47 111 49 113 51 115 53 117 55 119 57 121 59 123 61 125 63 127 )
+Distances:		21 10
+Free memory:		1.02938e+06 MB
+Total memory:		1.03212e+06 MB
+--------------------------------------------------------------------------------
+likwid-perfctr -a
++ likwid-perfctr -a
+Group name	Description
+--------------------------------------------------------------------------------
+   BRANCH	Branch prediction miss rate/ratio
+    CLOCK	Power and Energy consumption
+     DATA	Load to store ratio
+  DDR_HBM	Memory bandwidth in MBytes/s for DDR and HBM
+   DIVIDE	Divide unit information
+   ENERGY	Power and Energy consumption
+FLOPS_AVX	Packed AVX MFLOP/s
+ FLOPS_DP	Double Precision MFLOP/s
+ FLOPS_HP	Half Precision MFLOP/s
+ FLOPS_SP	Single Precision MFLOP/s
+      HBM	HBM bandwidth in MBytes/s
+   HBM_DP	Overview of DP arithmetic and main memory performance
+   HBM_HP	Overview of HP arithmetic and main memory performance
+   HBM_SP	Overview of SP arithmetic and main memory performance
+       L2	L2 cache bandwidth in MBytes/s
+  L2CACHE	L2 cache miss rate/ratio
+       L3	L3 cache bandwidth in MBytes/s
+  L3CACHE	L3 cache miss rate/ratio
+      MEM	Memory bandwidth in MBytes/s
+   MEM_DP	Overview of DP arithmetic and main memory performance
+   MEM_HP	Overview of HP arithmetic and main memory performance
+   MEM_SP	Overview of SP arithmetic and main memory performance
+  SPECI2M	Memory bandwidth in MBytes/s including SpecI2M
+ TLB_DATA	L1 data TLB miss rate/ratio
+TLB_INSTR	L1 Instruction TLB miss rate/ratio
+      TMA	Top down cycle allocation
+likwid-bench -a
++ likwid-bench -a
+clcopy - Double-precision cache line copy, only touches first element of each cache line.
+clload - Double-precision cache line load, only loads first element of each cache line.
+clstore - Double-precision cache line store, only stores first element of each cache line.
+copy - Double-precision vector copy, only scalar operations
+copy_avx - Double-precision vector copy, optimized for AVX
+copy_avx512 - Double-precision vector copy, optimized for AVX-512
+copy_mem - Double-precision vector copy, only scalar operations but with non-temporal stores
+copy_mem_avx - Double-precision vector copy, uses AVX and non-temporal stores
+copy_mem_avx512 - Double-precision vector copy, uses AVX-512 and non-temporal stores
+copy_mem_sse - Double-precision vector copy, uses SSE and non-temporal stores
+copy_sse - Double-precision vector copy, optimized for SSE
+daxpy - Double-precision linear combination of two vectors, only scalar operations
+daxpy_avx - Double-precision linear combination of two vectors, optimized for AVX
+daxpy_avx512 - Double-precision linear combination of two vectors, optimized for AVX-512
+daxpy_avx512_fma - Double-precision linear combination of two vectors, optimized for AVX-512 FMAs
+daxpy_avx_fma - Double-precision linear combination of two vectors, optimized for AVX FMAs
+daxpy_mem_avx - Double-precision linear combination of two vectors, optimized for AVX and non-temporal stores (Just for architectural research)
+daxpy_mem_avx512 - Double-precision linear combination of two vectors, optimized for AVX-512 and non-temporal stores
+daxpy_mem_avx512_fma - Double-precision linear combination of two vectors, optimized for AVX-512 FMAs and non-temporal stores (Just for architectural research)
+daxpy_mem_avx_fma - Double-precision linear combination of two vectors, optimized for AVX FMAs and non-temporal stores (Just for architectural research)
+daxpy_mem_sse - Double-precision linear combination of two vectors, optimized for SSE and non-temporal stores (Just for architectural research)
+daxpy_mem_sse_fma - Double-precision linear combination of two vectors, optimized for SSE FMAs and non temporal stores (Just for architectural research)
+daxpy_sp - Single-precision linear combination of two vectors, only scalar operations
+daxpy_sp_avx - Single-precision linear combination of two vectors, optimized for AVX
+daxpy_sp_avx512 - Single-precision linear combination of two vectors, optimized for AVX-512
+daxpy_sp_avx512_fma - Single-precision linear combination of two vectors, optimized for AVX-512 FMAs
+daxpy_sp_avx_fma - Single-precision linear combination of two vectors, optimized for AVX FMAs
+daxpy_sp_mem_avx - Single-precision linear combination of two vectors, optimized for AVX and non-temporal stores (Just for architectural research)
+daxpy_sp_mem_avx512 - Single-precision linear combination of two vectors, optimized for AVX-512 and non-temporal stores (Just for architectural research)
+daxpy_sp_mem_avx512_fma - Single-precision linear combination of two vectors, optimized for AVX-512 FMAs and non-temporal stores (Just for architectural research)
+daxpy_sp_mem_avx_fma - Single-precision linear combination of two vectors, optimized for AVX FMAs and non-temporal stores (Just for architectural research)
+daxpy_sp_mem_sse - Single-precision linear combination of two vectors, optimized for SSE and non-temporal stores (Just for architectural research)
+daxpy_sp_mem_sse_fma - Single-precision linear combination of two vectors, optimized for SSE FMAs and non-temporal stores (Just for architectural research)
+daxpy_sp_sse - Single-precision linear combination of two vectors, optimized for SSE
+daxpy_sp_sse_fma - Single-precision linear combination of two vectors, optimized for SSE FMAs
+daxpy_sse - Double-precision linear combination of two vectors, optimized for SSE
+daxpy_sse_fma - Double-precision linear combination of two vectors, optimized for SSE FMAs
+ddot - Double-precision dot product of two vectors, only scalar operations
+ddot_avx - Double-precision dot product of two vectors, optimized for AVX
+ddot_avx512 - Double-precision dot product of two vectors, optimized for AVX-512
+ddot_sp - Single-precision dot product of two vectors, only scalar operations
+ddot_sp_avx - Single-precision dot product of two vectors, optimized for AVX
+ddot_sp_avx512 - Single-precision dot product of two vectors, optimized for AVX-512
+ddot_sp_sse - Single-precision dot product of two vectors, optimized for SSE
+ddot_sse - Double-precision dot product of two vectors, optimized for SSE
+divide - Double-precision vector update, only scalar operations
+load - Double-precision load, only scalar operations
+load_avx - Double-precision load, optimized for AVX
+load_avx512 - Double-precision load, optimized for AVX-512
+load_mem - Double-precision load, using non-temporal loads
+load_sse - Double-precision load, optimized for SSE
+peakflops - Double-precision multiplications and additions with a single load, only scalar operations
+peakflops_avx - Double-precision multiplications and additions with a single load, optimized for AVX
+peakflops_avx512 - Double-precision multiplications and additions with a single load, optimized for AVX-512
+peakflops_avx512_fma - Double-precision multiplications and additions with a single load, optimized for AVX-512 FMAs
+peakflops_avx_fma - Double-precision multiplications and additions with a single load, optimized for AVX FMAs
+peakflops_sp - Single-precision multiplications and additions with a single load, only scalar operations
+peakflops_sp_avx - Single-precision multiplications and additions with a single load, optimized for AVX
+peakflops_sp_avx512 - Single-precision multiplications and additions with a single load, optimized for AVX-512
+peakflops_sp_avx512_fma - Single-precision multiplications and additions with a single load, optimized for AVX-512 FMAs
+peakflops_sp_avx_fma - Single-precision multiplications and additions with a single load, optimized for AVX FMAs
+peakflops_sp_sse - Single-precision multiplications and additions with a single load, optimised for SSE
+peakflops_sse - Double-precision multiplications and additions with a single load, optimised for SSE
+store - Double-precision store, only scalar operations
+store_avx - Double-precision store, optimized for AVX
+store_avx512 - Double-precision store, optimized for AVX-512
+store_mem - Double-precision store, uses non-temporal stores
+store_mem_avx - Double-precision store, uses AVX and non-temporal stores
+store_mem_avx512 - Double-precision store, uses AVX-512 and non-temporal stores
+store_mem_sse - Double-precision store, uses SSE and non-temporal stores
+store_sse - Double-precision store, optimized for SSE
+stream - Double-precision stream triad A(i) = B(i)*c + C(i), only scalar operations
+stream_avx - Double-precision stream triad A(i) = B(i)*c + C(i), optimized for AVX
+stream_avx512 - Double-precision stream triad A(i) = B(i)*c + C(i), optimized for AVX-512
+stream_avx512_fma - Double-precision stream triad A(i) = B(i)*c + C(i), optimized for AVX-512 FMAs
+stream_avx_fma - Double-precision stream triad A(i) = B(i)*c + C(i), optimized for AVX FMAs
+stream_mem - Double-precision stream triad A(i) = B(i)*c + C(i), uses scalar arithmetic and SSE non-temporal stores
+stream_mem_avx - Double-precision stream triad A(i) = B(i)*c + C(i), uses AVX and non-temporal stores
+stream_mem_avx512 - Double-precision stream triad A(i) = B(i)*c + C(i), uses AVX-512 and non-temporal stores
+stream_mem_avx_fma - Double-precision stream triad A(i) = B(i)*c + C(i), optimized for AVX FMAs and non-temporal stores
+stream_mem_sse - Double-precision stream triad A(i) = B(i)*c + C(i), uses SSE and non-temporal stores
+stream_mem_sse_fma - Double-precision stream triad A(i) = B(i)*c + C(i), uses SSE FMAs and non-temporal stores
+stream_sp - Single-precision stream triad A(i) = B(i)*c + C(i), only scalar operations
+stream_sp_avx - Single-precision stream triad A(i) = B(i)*c + C(i), optimized for AVX
+stream_sp_avx512 - Single-precision stream triad A(i) = B(i)*c + C(i), optimized for AVX-512
+stream_sp_avx512_fma - Single-precision stream triad A(i) = B(i)*c + C(i), optimized for AVX-512 FMAs
+stream_sp_avx_fma - Single-precision stream triad A(i) = B(i)*c + C(i), optimized for AVX FMAs
+stream_sp_mem - Single-precision stream triad A(i) = B(i)*c + C(i), uses scalar arithmetic and SSE non-temporal stores
+stream_sp_mem_avx - Single-precision stream triad A(i) = B(i)*c + C(i), optimized for AVX and non-temporal stores
+stream_sp_mem_avx512 - Single-precision stream triad A(i) = B(i)*c + C(i), optimized for AVX-512 and non-temporal stores
+stream_sp_mem_avx512_fma - Single-precision stream triad A(i) = B(i)*c + C(i), optimized for AVX-512 FMAs and non-temporal stores
+stream_sp_mem_avx_fma - Single-precision stream triad A(i) = B(i)*c + C(i), optimized for AVX FMAs and non-temporal stores
+stream_sp_mem_sse - Single-precision stream triad A(i) = B(i)*c + C(i), optimized for SSE and non-temporal stores
+stream_sp_mem_sse_fma - Single-precision stream triad A(i) = B(i)*c + C(i), optimized for SSE FMAs and non-temporal stores
+stream_sp_sse - Single-precision stream triad A(i) = B(i)*c + C(i), optimized for SSE
+stream_sp_sse_fma - Single-precision stream triad A(i) = B(i)*c + C(i), optimized for SSE FMAs
+stream_sse - Double-precision stream triad A(i) = B(i)*c + C(i), optimized for SSE
+stream_sse_fma - Double-precision stream triad A(i) = B(i)*c + C(i), optimized for SSE FMAs
+sum - Double-precision sum of a vector, only scalar operations
+sum_avx - Double-precision sum of a vector, optimized for AVX
+sum_avx512 - Double-precision sum of a vector, optimized for AVX-512
+sum_sp - Single-precision sum of a vector, only scalar operations
+sum_sp_avx - Single-precision sum of a vector, optimized for AVX
+sum_sp_avx512 - Single-precision sum of a vector, optimized for AVX-512
+sum_sp_sse - Single-precision sum of a vector, optimized for SSE
+sum_sse - Double-precision sum of a vector, optimized for SSE
+triad - Double-precision triad A(i) = B(i) * C(i) + D(i), only scalar operations
+triad_avx - Double-precision triad A(i) = B(i) * C(i) + D(i), optimized for AVX
+triad_avx512 - Double-precision triad A(i) = B(i) * C(i) + D(i), optimized for AVX-512
+triad_avx512_fma - Double-precision triad A(i) = B(i) * C(i) + D(i), optimized for AVX-512 FMAs
+triad_avx_fma - Double-precision triad A(i) = B(i) * C(i) + D(i), optimized for AVX FMAs
+triad_mem_avx - Double-precision triad A(i) = B(i) * C(i) + D(i), uses AVX and non-temporal stores
+triad_mem_avx512 - Double-precision triad A(i) = B(i) * C(i) + D(i), uses AVX-512 and non-temporal stores
+triad_mem_avx512_fma - Double-precision triad A(i) = B(i) * C(i) + D(i), optimized for AVX-512 FMAs and non-temporal stores
+triad_mem_avx_fma - Double-precision triad A(i) = B(i) * C(i) + D(i), optimized for AVX FMAs and non-temporal stores
+triad_mem_sse - Double-precision triad A(i) = B(i) * C(i) + D(i), optimized for SSE and non-temporal stores
+triad_mem_sse_fma - Double-precision triad A(i) = B(i) * C(i) + D(i), optimized for SSE FMAs and non-temporal stores
+triad_sp - Single-precision triad A(i) = B(i) * C(i) + D(i), only scalar operations
+triad_sp_avx - Single-precision triad A(i) = B(i) * C(i) + D(i), optimized for AVX
+triad_sp_avx512 - Single-precision triad A(i) = B(i) * C(i) + D(i), optimized for AVX-512
+triad_sp_avx512_fma - Single-precision triad A(i) = B(i) * C(i) + D(i), optimized for AVX-512 FMAs
+triad_sp_avx_fma - Single-precision triad A(i) = B(i) * C(i) + D(i), optimized for AVX FMAs
+triad_sp_mem_avx - Single-precision triad A(i) = B(i) * C(i) + D(i), optimized for AVX and non-temporal stores
+triad_sp_mem_avx512 - Single-precision triad A(i) = B(i) * C(i) + D(i), optimized for AVX-512 and non-temporal stores
+triad_sp_mem_avx512_fma - Single-precision triad A(i) = B(i) * C(i) + D(i), optimized for AVX-512 FMAs and non-temporal stores
+triad_sp_mem_avx_fma - Single-precision triad A(i) = B(i) * C(i) + D(i), optimized for AVX FMAs and non-temporal stores
+triad_sp_mem_sse - Single-precision triad A(i) = B(i) * C(i) + D(i), optimized for SSE and non-temporal stores
+triad_sp_mem_sse_fma - Single-precision triad A(i) = B(i) * C(i) + D(i), optimized for SSE FMAs and non-temporal stores
+triad_sp_sse - Single-precision triad A(i) = B(i) * C(i) + D(i), optimized for SSE
+triad_sp_sse_fma - Single-precision triad A(i) = B(i) * C(i) + D(i), optimized for SSE FMAs
+triad_sse - Double-precision triad A(i) = B(i) * C(i) + D(i), optimized for SSE
+triad_sse_fma - Double-precision triad A(i) = B(i) * C(i) + D(i), optimized for SSE FMAs
+update - Double-precision vector update, only scalar operations
+update_avx - Double-precision vector update, optimized for AVX
+update_avx512 - Double-precision vector update, optimized for AVX-512
+update_sp - Single-precision vector update, only scalar operations
+update_sp_avx - Single-precision vector update, optimized for AVX
+update_sp_avx512 - Single-precision vector update, optimized for AVX-512
+update_sp_sse - Single-precision vector update, optimized for SSE
+update_sse - Double-precision vector update, optimized for SSE
+
+User benchmarks:
+
+part0=""; part1=""; part2=""; part3=""; part4=""
++ part0=
++ part1=
++ part2=
++ part3=
++ part4=
+
+case $num in
+  n1) part0="numactl --cpunodebind=$cnb --membind=$mb" ;;
+  n2) part0="numactl --cpunodebind=$cnb --membind=$mb" likwid-pin -c $CV ;;
+esac
++ case $num in
++ part0='numactl --cpunodebind=0-1 --membind=0-1'
+
+case $app in
+  lwpc*) 
+    case $app in
+      *FA*) group="FLOPS_AVX" ;;
+      *FS*) group="FLOPS_SP" ;;
+      *FD*) group="FLOPS_DP" ;;
+      *MM*) group="MEM" ;;
+      *M1*) group="MEM1" ;;
+      *M2*) group="MEM2" ;;
+      *L2*) group="L2" ;;
+      *L3*) group="L3" ;;
+      *CA*) group="CACHE" ;;
+      *LA*) group="L2CACHE" ;;
+      *LB*) group="L3CACHE" ;;
+      *MR*) group="MEMREAD" ;;
+      *MW*) group="MEMWRITE" ;;
+      *)    echo "Error: group not defined yet"; exit 1 ;;
+    esac
+    part1="likwid-perfctr -C $CV -g $group -m"
+    ;;
+  lwp)
+    part1="likwid-pin -c $CV -m"
+    ;;
+esac
++ case $app in
++ case $app in
++ group=FLOPS_AVX
++ part1='likwid-perfctr -C 0-63 -g FLOPS_AVX -m'
+
+case $mod in
+  lwb)
+    part2="likwid-bench"
+    ;;
+esac
++ case $mod in
++ part2=likwid-bench
+
+W=$(echo $ker | cut -d '+' -f 1 | sed 's/^0*//')
+++ echo 0032+pda5f
+++ cut -d + -f 1
+++ sed 's/^0*//'
++ W=32
+case $ker in
+  *pd000) kernel="peakflops" ;;
+  *pds00) kernel="peakflops_sse" ;;
+  *pda00) kernel="peakflops_avx" ;;
+  *pdaf0) kernel="peakflops_avx_fma" ;;
+  *pda50) kernel="peakflops_avx512" ;;
+  *pda5f) kernel="peakflops_avx512_fma" ;;
+  *ps000) kernel="peakflops_sp" ;;
+  *pss00) kernel="peakflops_sp_sse" ;;
+  *psa00) kernel="peakflops_sp_avx" ;;
+  *psaf0) kernel="peakflops_sp_avx_fma" ;;
+  *psa50) kernel="peakflops_sp_avx512" ;;
+  *psa5f) kernel="peakflops_sp_avx512_fma" ;;
+
+  *sdma00) kernel="stream_mem_avx" ;;
+  *sdma50) kernel="stream_mem_avx512" ;;
+
+  *ld00) kernel="load" ;;
+  *lda0) kernel="load_avx" ;;
+  *lda5) kernel="load_avx512" ;;
+  *ldm0) kernel="load_mem" ;;
+  *lds0) kernel="load_sse" ;;
+
+  *)    echo "Error: ker not defined yet"; exit 1 ;;
+esac
++ case $ker in
++ kernel=peakflops_avx512_fma
+
+part3="-t $kernel"
++ part3='-t peakflops_avx512_fma'
+case $kernel in
+  peak*)
+    PW=$(( $W * $run_threads ))KB
+    #part4="-W N:$PW:$run_threads -i 1000" 
+    part4="-W N:$PW:$run_threads" 
+    ;;
+  stream*) 
+    SW=$(( $W * $run_threads ))MB
+    #part4="-W N:$SW:$run_threads -i 50" 
+    part4="-W N:$SW:$run_threads"
+    ;;
+  load*)
+    LW=$(( $W * $run_threads ))KB
+    #part4="-W S0:$LW:$run_threads -i 50000"
+    part4="-W S0:$LW:$run_threads"
+    ;;
+  *)       
+    echo "Error: kernel not defined yet"; exit 1 
+    ;;
+esac
++ case $kernel in
++ PW=2048KB
++ part4='-W N:2048KB:64'
+
+te=$(date +%s)
+++ date +%s
++ te=1764080588
+tb=$((te-ts))
++ tb=4
+
+exec="$part0 $part1 $part2 $part3 $part4"
++ exec='numactl --cpunodebind=0-1 --membind=0-1 likwid-perfctr -C 0-63 -g FLOPS_AVX -m likwid-bench -t peakflops_avx512_fma -W N:2048KB:64'
+
+## Run
+ts=$(date +%s)
+++ date +%s
++ ts=1764080588
+prof_output="${expid}_${work}"
++ prof_output=pstb004_lkd_cosma8-dine2-intel_seq-064_n1-lwpcFA-lwb-0032+pda5f_deft59
+if [[ $machine == "cosma8" ]]; then
+  set +xuve
+  source $HOME/intel/oneapi/setvars.sh
+  module load linaro/forge/23.1.0
+  set -xuve
+else
+  echo "Error: $machine not defined yet"; exit 1
+fi
++ [[ cosma8 == \c\o\s\m\a\8 ]]
++ set +xuve
+ 
+:: initializing oneAPI environment ...
+   deploy.sh: BASH_VERSION = 5.1.8(1)-release
+   args: Using "$@" for setvars.sh arguments: lkd cosma8-dine2-intel seq-64 n1-lwpcFA-lwb-0032+pda5f deft59
+:: advisor -- latest
+:: debugger -- latest
+:: inspector -- latest
+:: itac -- latest
+:: vtune -- latest
+:: oneAPI environment initialized ::
+ 
+if [[ $run_procs == "seq" ]]; then
+  case $testcase in
+    def*)
+      $exec
+      ;;
+    iac*) # advisor: Error: [Instrumentation Engine]: /tmp_proj/pin_jenkins/workspace/pypl-pin-nightly/GitPin/Source/pin/elfio/elf_parser.cpp: ProcessSectionHeaders: 827: strange section type for .annobin.notes
+      date
+      advisor --collect=survey                     $exec
+      date
+      advisor --collect=tripcounts --flop --stacks $exec
+      date
+      advisor -collect=map --enable-cache-simulation $exec
+      date
+      ;;
+    *)
+      echo "Error: $testcase not defined yet"; exit 1
+      ;;
+  esac
+else
+  case $testcase in
+    def)
+      mpirun -n $run_procs $exec
+      ;;
+    *)
+      echo "Error: $testcase not defined yet"; exit 1      
+      ;;
+  esac
+fi
++ [[ seq == \s\e\q ]]
++ case $testcase in
++ numactl --cpunodebind=0-1 --membind=0-1 likwid-perfctr -C 0-63 -g FLOPS_AVX -m likwid-bench -t peakflops_avx512_fma -W N:2048KB:64
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Gold 6430
+CPU type:	Intel SapphireRapids processor
+CPU clock:	2.10 GHz
+--------------------------------------------------------------------------------
+Allocate: Process running on hwthread 0 (Domain N) - Vector length 256000/2048000 Offset 0 Alignment 512
+Initialization: Each thread in domain initializes its own stream chunks
+--------------------------------------------------------------------------------
+LIKWID MICRO BENCHMARK
+Test: peakflops_avx512_fma
+--------------------------------------------------------------------------------
+Using 1 work groups
+Using 64 threads
+--------------------------------------------------------------------------------
+Using Likwid Marker API
+--------------------------------------------------------------------------------
+Group: 0 Thread 0 Global Thread 0 running on hwthread 0 - Vector length 4000 Offset 0
+Group: 0 Thread 1 Global Thread 1 running on hwthread 2 - Vector length 4000 Offset 4000
+Group: 0 Thread 2 Global Thread 2 running on hwthread 4 - Vector length 4000 Offset 8000
+Group: 0 Thread 3 Global Thread 3 running on hwthread 6 - Vector length 4000 Offset 12000
+Group: 0 Thread 4 Global Thread 4 running on hwthread 8 - Vector length 4000 Offset 16000
+Group: 0 Thread 5 Global Thread 5 running on hwthread 10 - Vector length 4000 Offset 20000
+Group: 0 Thread 6 Global Thread 6 running on hwthread 12 - Vector length 4000 Offset 24000
+Group: 0 Thread 7 Global Thread 7 running on hwthread 14 - Vector length 4000 Offset 28000
+Group: 0 Thread 8 Global Thread 8 running on hwthread 16 - Vector length 4000 Offset 32000
+Group: 0 Thread 9 Global Thread 9 running on hwthread 18 - Vector length 4000 Offset 36000
+Group: 0 Thread 10 Global Thread 10 running on hwthread 20 - Vector length 4000 Offset 40000
+Group: 0 Thread 11 Global Thread 11 running on hwthread 22 - Vector length 4000 Offset 44000
+Group: 0 Thread 12 Global Thread 12 running on hwthread 24 - Vector length 4000 Offset 48000
+Group: 0 Thread 13 Global Thread 13 running on hwthread 26 - Vector length 4000 Offset 52000
+Group: 0 Thread 14 Global Thread 14 running on hwthread 28 - Vector length 4000 Offset 56000
+Group: 0 Thread 15 Global Thread 15 running on hwthread 30 - Vector length 4000 Offset 60000
+Group: 0 Thread 16 Global Thread 16 running on hwthread 32 - Vector length 4000 Offset 64000
+Group: 0 Thread 17 Global Thread 17 running on hwthread 34 - Vector length 4000 Offset 68000
+Group: 0 Thread 18 Global Thread 18 running on hwthread 36 - Vector length 4000 Offset 72000
+Group: 0 Thread 19 Global Thread 19 running on hwthread 38 - Vector length 4000 Offset 76000
+Group: 0 Thread 20 Global Thread 20 running on hwthread 40 - Vector length 4000 Offset 80000
+Group: 0 Thread 21 Global Thread 21 running on hwthread 42 - Vector length 4000 Offset 84000
+Group: 0 Thread 22 Global Thread 22 running on hwthread 44 - Vector length 4000 Offset 88000
+Group: 0 Thread 23 Global Thread 23 running on hwthread 46 - Vector length 4000 Offset 92000
+Group: 0 Thread 24 Global Thread 24 running on hwthread 48 - Vector length 4000 Offset 96000
+Group: 0 Thread 25 Global Thread 25 running on hwthread 50 - Vector length 4000 Offset 100000
+Group: 0 Thread 26 Global Thread 26 running on hwthread 52 - Vector length 4000 Offset 104000
+Group: 0 Thread 27 Global Thread 27 running on hwthread 54 - Vector length 4000 Offset 108000
+Group: 0 Thread 28 Global Thread 28 running on hwthread 56 - Vector length 4000 Offset 112000
+Group: 0 Thread 29 Global Thread 29 running on hwthread 58 - Vector length 4000 Offset 116000
+Group: 0 Thread 30 Global Thread 30 running on hwthread 60 - Vector length 4000 Offset 120000
+Group: 0 Thread 31 Global Thread 31 running on hwthread 62 - Vector length 4000 Offset 124000
+Group: 0 Thread 32 Global Thread 32 running on hwthread 1 - Vector length 4000 Offset 128000
+Group: 0 Thread 33 Global Thread 33 running on hwthread 3 - Vector length 4000 Offset 132000
+Group: 0 Thread 34 Global Thread 34 running on hwthread 5 - Vector length 4000 Offset 136000
+Group: 0 Thread 35 Global Thread 35 running on hwthread 7 - Vector length 4000 Offset 140000
+Group: 0 Thread 36 Global Thread 36 running on hwthread 9 - Vector length 4000 Offset 144000
+Group: 0 Thread 37 Global Thread 37 running on hwthread 11 - Vector length 4000 Offset 148000
+Group: 0 Thread 38 Global Thread 38 running on hwthread 13 - Vector length 4000 Offset 152000
+Group: 0 Thread 39 Global Thread 39 running on hwthread 15 - Vector length 4000 Offset 156000
+Group: 0 Thread 40 Global Thread 40 running on hwthread 17 - Vector length 4000 Offset 160000
+Group: 0 Thread 41 Global Thread 41 running on hwthread 19 - Vector length 4000 Offset 164000
+Group: 0 Thread 42 Global Thread 42 running on hwthread 21 - Vector length 4000 Offset 168000
+Group: 0 Thread 43 Global Thread 43 running on hwthread 23 - Vector length 4000 Offset 172000
+Group: 0 Thread 44 Global Thread 44 running on hwthread 25 - Vector length 4000 Offset 176000
+Group: 0 Thread 45 Global Thread 45 running on hwthread 27 - Vector length 4000 Offset 180000
+Group: 0 Thread 46 Global Thread 46 running on hwthread 29 - Vector length 4000 Offset 184000
+Group: 0 Thread 47 Global Thread 47 running on hwthread 31 - Vector length 4000 Offset 188000
+Group: 0 Thread 48 Global Thread 48 running on hwthread 33 - Vector length 4000 Offset 192000
+Group: 0 Thread 49 Global Thread 49 running on hwthread 35 - Vector length 4000 Offset 196000
+Group: 0 Thread 50 Global Thread 50 running on hwthread 37 - Vector length 4000 Offset 200000
+Group: 0 Thread 51 Global Thread 51 running on hwthread 39 - Vector length 4000 Offset 204000
+Group: 0 Thread 52 Global Thread 52 running on hwthread 41 - Vector length 4000 Offset 208000
+Group: 0 Thread 53 Global Thread 53 running on hwthread 43 - Vector length 4000 Offset 212000
+Group: 0 Thread 54 Global Thread 54 running on hwthread 45 - Vector length 4000 Offset 216000
+Group: 0 Thread 55 Global Thread 55 running on hwthread 47 - Vector length 4000 Offset 220000
+Group: 0 Thread 56 Global Thread 56 running on hwthread 49 - Vector length 4000 Offset 224000
+Group: 0 Thread 57 Global Thread 57 running on hwthread 51 - Vector length 4000 Offset 228000
+Group: 0 Thread 58 Global Thread 58 running on hwthread 53 - Vector length 4000 Offset 232000
+Group: 0 Thread 59 Global Thread 59 running on hwthread 55 - Vector length 4000 Offset 236000
+Group: 0 Thread 60 Global Thread 60 running on hwthread 57 - Vector length 4000 Offset 240000
+Group: 0 Thread 61 Global Thread 61 running on hwthread 59 - Vector length 4000 Offset 244000
+Group: 0 Thread 62 Global Thread 62 running on hwthread 61 - Vector length 4000 Offset 248000
+Group: 0 Thread 63 Global Thread 63 running on hwthread 63 - Vector length 4000 Offset 252000
+--------------------------------------------------------------------------------
+Cycles:			3633204534
+CPU Clock:		2100027167
+Cycle Clock:		2100027167
+Time:			1.730075e+00 sec
+Iterations:		67108864
+Iterations per thread:	1048576
+Inner loop executions:	500
+Size (Byte):		2048000
+Size per thread:	32000
+Number of Flops:	8053063680000
+MFlops/s:		4654748.27
+Data volume (Byte):	2147483648000
+MByte/s:		1241266.20
+Cycles per update:	0.013535
+Cycles per cacheline:	0.108278
+Loads per update:	1
+Stores per update:	0
+Load bytes per element:	8
+Store bytes per elem.:	0
+Instructions:		637534208032
+UOPs:			603979776000
+--------------------------------------------------------------------------------
+Writing Likwid Marker API results to file /tmp/likwid_301530.txt
+--------------------------------------------------------------------------------
+Region bench, Group 1: FLOPS_AVX
++-------------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|    Region Info    | HWThread 0 | HWThread 1 | HWThread 2 | HWThread 3 | HWThread 4 | HWThread 5 | HWThread 6 | HWThread 7 | HWThread 8 | HWThread 9 | HWThread 10 | HWThread 11 | HWThread 12 | HWThread 13 | HWThread 14 | HWThread 15 | HWThread 16 | HWThread 17 | HWThread 18 | HWThread 19 | HWThread 20 | HWThread 21 | HWThread 22 | HWThread 23 | HWThread 24 | HWThread 25 | HWThread 26 | HWThread 27 | HWThread 28 | HWThread 29 | HWThread 30 | HWThread 31 | HWThread 32 | HWThread 33 | HWThread 34 | HWThread 35 | HWThread 36 | HWThread 37 | HWThread 38 | HWThread 39 | HWThread 40 | HWThread 41 | HWThread 42 | HWThread 43 | HWThread 44 | HWThread 45 | HWThread 46 | HWThread 47 | HWThread 48 | HWThread 49 | HWThread 50 | HWThread 51 | HWThread 52 | HWThread 53 | HWThread 54 | HWThread 55 | HWThread 56 | HWThread 57 | HWThread 58 | HWThread 59 | HWThread 60 | HWThread 61 | HWThread 62 | HWThread 63 |
++-------------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+| RDTSC Runtime [s] |   1.729945 |   1.730003 |   1.729941 |   1.730072 |   1.730079 |   1.730032 |   1.730051 |   1.729941 |   1.730002 |   1.729947 |    1.730082 |    1.729983 |    1.729945 |    1.729951 |    1.730076 |    1.729963 |    1.730054 |    1.729944 |    1.729944 |    1.729965 |    1.730069 |    1.729968 |    1.729943 |    1.730006 |    1.730072 |    1.730006 |    1.729998 |    1.729943 |    1.729933 |    1.730024 |    1.730045 |    1.730045 |    1.729944 |    1.730000 |    1.730041 |    1.729958 |    1.730002 |    1.730075 |    1.730022 |    1.730018 |    1.730047 |    1.730081 |    1.730067 |    1.729948 |    1.730043 |    1.729949 |    1.730000 |    1.729997 |    1.729971 |    1.729953 |    1.730062 |    1.730068 |    1.713837 |    1.730002 |    1.730047 |    1.730006 |    1.730000 |    1.729943 |    1.730071 |    1.730005 |    1.730010 |    1.729941 |    1.730000 |    1.729947 |
+|     call count    |          1 |          1 |          1 |          1 |          1 |          1 |          1 |          1 |          1 |          1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |           1 |
++-------------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
++------------------------------------------+---------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                   Event                  | Counter |  HWThread 0 |  HWThread 1 |  HWThread 2 |  HWThread 3 |  HWThread 4 |  HWThread 5 |  HWThread 6 |  HWThread 7 |  HWThread 8 |  HWThread 9 | HWThread 10 | HWThread 11 | HWThread 12 | HWThread 13 | HWThread 14 | HWThread 15 | HWThread 16 | HWThread 17 | HWThread 18 | HWThread 19 | HWThread 20 | HWThread 21 | HWThread 22 | HWThread 23 | HWThread 24 | HWThread 25 | HWThread 26 | HWThread 27 | HWThread 28 | HWThread 29 | HWThread 30 | HWThread 31 | HWThread 32 | HWThread 33 | HWThread 34 | HWThread 35 | HWThread 36 | HWThread 37 | HWThread 38 | HWThread 39 | HWThread 40 | HWThread 41 | HWThread 42 | HWThread 43 | HWThread 44 | HWThread 45 | HWThread 46 | HWThread 47 | HWThread 48 | HWThread 49 | HWThread 50 | HWThread 51 | HWThread 52 | HWThread 53 | HWThread 54 | HWThread 55 | HWThread 56 | HWThread 57 | HWThread 58 | HWThread 59 | HWThread 60 | HWThread 61 | HWThread 62 | HWThread 63 |
++------------------------------------------+---------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|             INSTR_RETIRED_ANY            |  FIXC0  | 10011810000 | 10050210000 | 10050100000 | 10049360000 | 10012710000 | 10030440000 | 10020030000 | 10049210000 | 10050140000 | 10049960000 | 10043230000 | 10049310000 | 10050130000 | 10049090000 | 10050010000 | 10049110000 | 10030740000 | 10049180000 | 10050150000 | 10049160000 | 10050210000 | 10049260000 | 10049990000 | 10049360000 | 10050160000 | 10049450000 | 10049380000 | 10046380000 | 10050090000 | 10049310000 | 10050130000 | 10049290000 | 10050130000 | 10043050000 | 10050080000 | 10049220000 | 10050140000 | 10049390000 | 10049970000 | 10049280000 | 10050160000 | 10049320000 | 10050110000 | 10049280000 | 10050020000 | 10049220000 | 10050140000 | 10049270000 | 10050130000 | 10049290000 | 10050000000 | 10049110000 | 10042070000 | 10049110000 | 10020050000 | 10049310000 | 10050150000 | 10049270000 | 10046710000 | 10012430000 | 10050150000 | 10049030000 | 10049980000 | 10049260000 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  |  3949076000 |  4120247000 |  4126118000 |  4121544000 |  3950786000 |  4032592000 |  3984569000 |  4120810000 |  4125913000 |  4120536000 |  4093878000 |  4120996000 |  4126245000 |  4120664000 |  4125406000 |  4120515000 |  4035080000 |  4121227000 |  4125805000 |  4120775000 |  4126602000 |  4121455000 |  4125479000 |  4121543000 |  4126507000 |  4120916000 |  4121687000 |  4107536000 |  4125990000 |  4121436000 |  4126302000 |  4121070000 |  4126139000 |  4120786000 |  4125670000 |  4120881000 |  4126326000 |  4121715000 |  4125379000 |  4121364000 |  4126484000 |  4121285000 |  4126487000 |  4120881000 |  4125689000 |  4120931000 |  4126148000 |  4121316000 |  4126389000 |  4121360000 |  4125049000 |  4120216000 |  4087226000 |  4120448000 |  3984842000 |  4121510000 |  4126359000 |  4121246000 |  4110912000 |  3948417000 |  4126265000 |  4120242000 |  4125343000 |  4121388000 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  |  3614306000 |  3613251000 |  3618386000 |  3614416000 |  3617210000 |  3613620000 |  3616545000 |  3613741000 |  3618540000 |  3614081000 |  3617935000 |  3613881000 |  3618463000 |  3613861000 |  3617752000 |  3613562000 |  3617695000 |  3614105000 |  3618330000 |  3613667000 |  3618816000 |  3614285000 |  3617839000 |  3614350000 |  3618686000 |  3613965000 |  3614569000 |  3614025000 |  3618234000 |  3614272000 |  3618527000 |  3614008000 |  3618428000 |  3613939000 |  3618053000 |  3613801000 |  3618588000 |  3614478000 |  3617707000 |  3614314000 |  3618650000 |  3614185000 |  3618697000 |  3613813000 |  3617958000 |  3613896000 |  3618431000 |  3614163000 |  3618574000 |  3614228000 |  3618158000 |  3613306000 |  3584281000 |  3613396000 |  3616950000 |  3614297000 |  3618566000 |  3614217000 |  3618582000 |  3612597000 |  3618583000 |  3613203000 |  3617667000 |  3614165000 |
+|               TOPDOWN_SLOTS              |  FIXC3  | 23587990000 | 24720860000 | 24754420000 | 24729260000 | 23702400000 | 24194180000 | 23906280000 | 24724330000 | 24755480000 | 24723220000 | 24555350000 | 24725980000 | 24757470000 | 24723990000 | 24752110000 | 24723090000 | 24210290000 | 24727360000 | 24754070000 | 24724650000 | 24759610000 | 24728730000 | 24752870000 | 24729000000 | 24759040000 | 24725250000 | 24730120000 | 24641680000 | 24755820000 | 24728620000 | 24757050000 | 24726420000 | 24756830000 | 24646490000 | 24754020000 | 24725290000 | 24757960000 | 24730290000 | 24752270000 | 24728000000 | 24758900000 | 24727710000 | 24758920000 | 24725280000 | 24754130000 | 24725590000 | 24755420000 | 24727620000 | 24758340000 | 24728040000 | 24750300000 | 24720950000 | 24523350000 | 24722440000 | 23907340000 | 24729060000 | 24758160000 | 24727480000 | 24611910000 | 23685070000 | 24755980000 | 24720400000 | 24751810000 | 24728330000 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE |   PMC0  |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC1  |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |
+| FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE |   PMC2  |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |
+| FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE |   PMC3  | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 | 15728640000 |
++------------------------------------------+---------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
++-----------------------------------------------+---------+---------------+-------------+-------------+--------------+
+|                     Event                     | Counter |      Sum      |     Min     |     Max     |      Avg     |
++-----------------------------------------------+---------+---------------+-------------+-------------+--------------+
+|             INSTR_RETIRED_ANY STAT            |  FIXC0  |  642941920000 | 10011810000 | 10050210000 |  10045967500 |
+|           CPU_CLK_UNHALTED_CORE STAT          |  FIXC1  |  262813998000 |  3948417000 |  4126602000 | 4.106469e+09 |
+|           CPU_CLK_UNHALTED_REF STAT           |  FIXC2  |  231384794000 |  3584281000 |  3618816000 | 3.615387e+09 |
+|               TOPDOWN_SLOTS STAT              |  FIXC3  | 1576610670000 | 23587990000 | 24759610000 | 2.463454e+10 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE STAT |   PMC0  |             0 |           0 |           0 |            0 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE STAT |   PMC1  |             0 |           0 |           0 |            0 |
+| FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE STAT |   PMC2  |             0 |           0 |           0 |            0 |
+| FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE STAT |   PMC3  | 1006632960000 | 15728640000 | 15728640000 |  15728640000 |
++-----------------------------------------------+---------+---------------+-------------+-------------+--------------+
+
++----------------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|        Metric        | HWThread 0 | HWThread 1 | HWThread 2 | HWThread 3 | HWThread 4 | HWThread 5 | HWThread 6 | HWThread 7 | HWThread 8 | HWThread 9 | HWThread 10 | HWThread 11 | HWThread 12 | HWThread 13 | HWThread 14 | HWThread 15 | HWThread 16 | HWThread 17 | HWThread 18 | HWThread 19 | HWThread 20 | HWThread 21 | HWThread 22 | HWThread 23 | HWThread 24 | HWThread 25 | HWThread 26 | HWThread 27 | HWThread 28 | HWThread 29 | HWThread 30 | HWThread 31 | HWThread 32 | HWThread 33 | HWThread 34 | HWThread 35 | HWThread 36 | HWThread 37 | HWThread 38 | HWThread 39 | HWThread 40 | HWThread 41 | HWThread 42 | HWThread 43 | HWThread 44 | HWThread 45 | HWThread 46 | HWThread 47 | HWThread 48 | HWThread 49 | HWThread 50 | HWThread 51 | HWThread 52 | HWThread 53 | HWThread 54 | HWThread 55 | HWThread 56 | HWThread 57 | HWThread 58 | HWThread 59 | HWThread 60 | HWThread 61 | HWThread 62 | HWThread 63 |
++----------------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|  Runtime (RDTSC) [s] |     1.7299 |     1.7300 |     1.7299 |     1.7301 |     1.7301 |     1.7300 |     1.7301 |     1.7299 |     1.7300 |     1.7299 |      1.7301 |      1.7300 |      1.7299 |      1.7300 |      1.7301 |      1.7300 |      1.7301 |      1.7299 |      1.7299 |      1.7300 |      1.7301 |      1.7300 |      1.7299 |      1.7300 |      1.7301 |      1.7300 |      1.7300 |      1.7299 |      1.7299 |      1.7300 |      1.7300 |      1.7300 |      1.7299 |      1.7300 |      1.7300 |      1.7300 |      1.7300 |      1.7301 |      1.7300 |      1.7300 |      1.7300 |      1.7301 |      1.7301 |      1.7299 |      1.7300 |      1.7299 |      1.7300 |      1.7300 |      1.7300 |      1.7300 |      1.7301 |      1.7301 |      1.7138 |      1.7300 |      1.7300 |      1.7300 |      1.7300 |      1.7299 |      1.7301 |      1.7300 |      1.7300 |      1.7299 |      1.7300 |      1.7299 |
+| Runtime unhalted [s] |     1.8805 |     1.9620 |     1.9648 |     1.9626 |     1.8813 |     1.9203 |     1.8974 |     1.9623 |     1.9647 |     1.9621 |      1.9494 |      1.9624 |      1.9649 |      1.9622 |      1.9645 |      1.9621 |      1.9214 |      1.9625 |      1.9646 |      1.9622 |      1.9650 |      1.9626 |      1.9645 |      1.9626 |      1.9650 |      1.9623 |      1.9627 |      1.9559 |      1.9647 |      1.9626 |      1.9649 |      1.9624 |      1.9648 |      1.9623 |      1.9646 |      1.9623 |      1.9649 |      1.9627 |      1.9644 |      1.9625 |      1.9650 |      1.9625 |      1.9650 |      1.9623 |      1.9646 |      1.9623 |      1.9648 |      1.9625 |      1.9649 |      1.9625 |      1.9643 |      1.9620 |      1.9463 |      1.9621 |      1.8975 |      1.9626 |      1.9649 |      1.9625 |      1.9576 |      1.8802 |      1.9649 |      1.9620 |      1.9644 |      1.9625 |
+|      Clock [MHz]     |  2294.5381 |  2394.6929 |  2394.7019 |  2394.6746 |  2293.6888 |  2343.5084 |  2313.7274 |  2394.6954 |  2394.4810 |  2394.3109 |   2376.2867 |   2394.7107 |   2394.7246 |   2394.5310 |   2394.7082 |   2394.6425 |   2342.3129 |   2394.6965 |   2394.5573 |   2394.7241 |   2394.6982 |   2394.7097 |   2394.6930 |   2394.7178 |   2394.7291 |   2394.6085 |   2394.6563 |   2386.7940 |   2394.7282 |   2394.7073 |   2394.7153 |   2394.6695 |   2394.6863 |   2394.5502 |   2394.6622 |   2394.6969 |   2394.6889 |   2394.7329 |   2394.7223 |   2394.6376 |   2394.7396 |   2394.6772 |   2394.7102 |   2394.6889 |   2394.7361 |   2394.6630 |   2394.6895 |   2394.7098 |   2394.7347 |   2394.6923 |   2394.2323 |   2394.6384 |   2394.7011 |   2394.7136 |   2313.6268 |   2394.7337 |   2394.7226 |   2394.6333 |   2385.7474 |   2295.2405 |   2394.6568 |   2394.7218 |   2394.7279 |   2394.7503 |
+|          CPI         |     0.3944 |     0.4100 |     0.4106 |     0.4101 |     0.3946 |     0.4020 |     0.3977 |     0.4101 |     0.4105 |     0.4100 |      0.4076 |      0.4101 |      0.4106 |      0.4101 |      0.4105 |      0.4100 |      0.4023 |      0.4101 |      0.4105 |      0.4101 |      0.4106 |      0.4101 |      0.4105 |      0.4101 |      0.4106 |      0.4101 |      0.4101 |      0.4089 |      0.4105 |      0.4101 |      0.4106 |      0.4101 |      0.4106 |      0.4103 |      0.4105 |      0.4101 |      0.4106 |      0.4101 |      0.4105 |      0.4101 |      0.4106 |      0.4101 |      0.4106 |      0.4101 |      0.4105 |      0.4101 |      0.4106 |      0.4101 |      0.4106 |      0.4101 |      0.4105 |      0.4100 |      0.4070 |      0.4100 |      0.3977 |      0.4101 |      0.4106 |      0.4101 |      0.4092 |      0.3944 |      0.4106 |      0.4100 |      0.4105 |      0.4101 |
+|  Packed SP [MFLOP/s] |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |           0 |
+|  Packed DP [MFLOP/s] | 72735.9078 | 72733.4692 | 72736.0760 | 72730.5684 | 72730.2742 | 72732.2500 | 72731.4513 | 72736.0760 | 72733.5113 | 72735.8237 |  72730.1481 |  72734.3101 |  72735.9078 |  72735.6555 |  72730.4003 |  72735.1510 |  72731.3251 |  72735.9498 |  72735.9498 |  72735.0669 |  72730.6946 |  72734.9408 |  72735.9919 |  72733.3431 |  72730.5684 |  72733.3431 |  72733.6795 |  72735.9919 |  72736.4123 |  72732.5864 |  72731.7035 |  72731.7035 |  72735.9498 |  72733.5954 |  72731.8717 |  72735.3612 |  72733.5113 |  72730.4423 |  72732.6705 |  72732.8386 |  72731.6194 |  72730.1901 |  72730.7786 |  72735.7817 |  72731.7876 |  72735.7396 |  72733.5954 |  72733.7215 |  72734.8146 |  72735.5714 |  72730.9888 |  72730.7366 |  73419.5376 |  72733.5113 |  72731.6194 |  72733.3431 |  72733.5954 |  72735.9919 |  72730.6105 |  72733.3852 |  72733.1750 |  72736.0760 |  72733.5954 |  72735.8237 |
++----------------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
++---------------------------+--------------+------------+------------+------------+
+|           Metric          |      Sum     |     Min    |     Max    |     Avg    |
++---------------------------+--------------+------------+------------+------------+
+|  Runtime (RDTSC) [s] STAT |     110.7036 |     1.7138 |     1.7301 |     1.7297 |
+| Runtime unhalted [s] STAT |     125.1481 |     1.8802 |     1.9650 |     1.9554 |
+|      Clock [MHz] STAT     |  152657.6059 |  2293.6888 |  2394.7503 |  2385.2751 |
+|          CPI STAT         |      26.1612 |     0.3944 |     0.4106 |     0.4088 |
+|  Packed SP [MFLOP/s] STAT |            0 |          0 |          0 |          0 |
+|  Packed DP [MFLOP/s] STAT | 4.655628e+06 | 72730.1481 | 73419.5376 | 72744.1885 |
++---------------------------+--------------+------------+------------+------------+
+
+
+te=$(date +%s)
+++ date +%s
++ te=1764080779
+tr=$((te-ts))
++ tr=191
+

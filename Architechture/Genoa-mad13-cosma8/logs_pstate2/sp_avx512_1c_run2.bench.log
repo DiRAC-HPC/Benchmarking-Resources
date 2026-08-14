@@ -1,0 +1,41 @@
+### tag=sp_avx512 cores=1 group=FLOPS_SP kernel=peakflops_sp_avx512 run=2/2
+### host=mad13 label=run date=2026-08-14T13:35:25+01:00
++ numactl --cpunodebind=0 --membind=0 likwid-perfctr -C 0 -g FLOPS_SP -m -o logs_pstate2/sp_avx512_1c_run2.txt likwid-bench -t peakflops_sp_avx512 -w M0:524288B:1
+
+INFO: You are running LIKWID in a cpuset with 48 CPUs. Taking given IDs as logical ID in cpuset
+Allocate: Process running on hwthread 0 (Domain M0) - Vector length 131072/524288 Offset 0 Alignment 1024
+--------------------------------------------------------------------------------
+LIKWID MICRO BENCHMARK
+Test: peakflops_sp_avx512
+--------------------------------------------------------------------------------
+Using 1 work groups
+Using 1 threads
+--------------------------------------------------------------------------------
+Using Likwid Marker API
+--------------------------------------------------------------------------------
+Group: 0 Thread 0 Global Thread 0 running on hwthread 0 - Vector length 131072 Offset 0
+--------------------------------------------------------------------------------
+Cycles:			2924852592
+CPU Clock:		2396375602
+Cycle Clock:		2396375602
+Time:			1.220532e+00 sec
+Iterations:		32768
+Iterations per thread:	32768
+Inner loop executions:	8192
+Size (Byte):		524288
+Size per thread:	524288
+Number of Flops:	64424509440
+MFlops/s:		52783.97
+Data volume (Byte):	17179869184
+MByte/s:		14075.72
+Cycles per update:	0.680995
+Cycles per cacheline:	10.895925
+Loads per update:	1
+Stores per update:	0
+Load bytes per element:	4
+Store bytes per elem.:	0
+Instructions:		5100273696
+UOPs:			4831838208
+--------------------------------------------------------------------------------
+Writing Likwid Marker API results to file /tmp/likwid_222878.txt
+### exit=0

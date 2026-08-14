@@ -1,0 +1,41 @@
+### tag=dp_fma_add cores=1 group=FLOPS_DP kernel=peakflops_amd_zen_avx512_fma_add run=1/2
+### host=mad13 label=run date=2026-08-14T11:56:40+01:00
++ numactl --cpunodebind=0 --membind=0 likwid-perfctr -C 0 -g FLOPS_DP -m -o ./logs/mad13_run_20260814-115629/dp_fma_add_1c_run1.txt likwid-bench -t peakflops_amd_zen_avx512_fma_add -w M0:524288B:1
+
+INFO: You are running LIKWID in a cpuset with 48 CPUs. Taking given IDs as logical ID in cpuset
+Allocate: Process running on hwthread 0 (Domain M0) - Vector length 65536/524288 Offset 0 Alignment 512
+--------------------------------------------------------------------------------
+LIKWID MICRO BENCHMARK
+Test: peakflops_amd_zen_avx512_fma_add
+--------------------------------------------------------------------------------
+Using 1 work groups
+Using 1 threads
+--------------------------------------------------------------------------------
+Using Likwid Marker API
+--------------------------------------------------------------------------------
+Group: 0 Thread 0 Global Thread 0 running on hwthread 0 - Vector length 65536 Offset 0
+--------------------------------------------------------------------------------
+Cycles:			2625706344
+CPU Clock:		2396380203
+Cycle Clock:		2396380203
+Time:			1.095697e+00 sec
+Iterations:		32768
+Iterations per thread:	32768
+Inner loop executions:	8192
+Size (Byte):		524288
+Size per thread:	524288
+Number of Flops:	96636764160
+MFlops/s:		88196.62
+Data volume (Byte):	17179869184
+MByte/s:		15679.40
+Cycles per update:	1.222690
+Cycles per cacheline:	9.781518
+Loads per update:	1
+Stores per update:	0
+Load bytes per element:	8
+Store bytes per elem.:	0
+Instructions:		9126805536
+UOPs:			8858370048
+--------------------------------------------------------------------------------
+Writing Likwid Marker API results to file /tmp/likwid_106869.txt
+### exit=0

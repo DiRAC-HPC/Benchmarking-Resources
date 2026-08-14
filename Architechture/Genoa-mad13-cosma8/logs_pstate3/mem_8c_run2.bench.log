@@ -1,0 +1,53 @@
+### tag=mem cores=8 group=MEM kernel=stream_mem_avx_fma run=2/2
+### host=mad13 label=run date=2026-08-14T11:59:26+01:00
++ numactl --cpunodebind=0 --membind=0 likwid-perfctr -C 0-7 -g MEM -m -o ./logs/mad13_run_20260814-115629/mem_8c_run2.txt likwid-bench -t stream_mem_avx_fma -w M0:4294967296B:8
+
+INFO: You are running LIKWID in a cpuset with 48 CPUs. Taking given IDs as logical ID in cpuset
+Warning: Sanitizing vector length to a multiple of the loop stride 16 and thread count 8 from 178956970 elements (1431655760 bytes) to 178956928 elements (1431655424 bytes)
+Allocate: Process running on hwthread 0 (Domain M0) - Vector length 178956928/1431655424 Offset 0 Alignment 512
+Allocate: Process running on hwthread 0 (Domain M0) - Vector length 178956928/1431655424 Offset 0 Alignment 512
+Allocate: Process running on hwthread 0 (Domain M0) - Vector length 178956928/1431655424 Offset 0 Alignment 512
+Initialization: First thread in domain initializes the whole stream
+--------------------------------------------------------------------------------
+LIKWID MICRO BENCHMARK
+Test: stream_mem_avx_fma
+--------------------------------------------------------------------------------
+Using 1 work groups
+Using 8 threads
+--------------------------------------------------------------------------------
+Using Likwid Marker API
+--------------------------------------------------------------------------------
+Group: 0 Thread 0 Global Thread 0 running on hwthread 0 - Vector length 22369616 Offset 0
+Group: 0 Thread 1 Global Thread 1 running on hwthread 1 - Vector length 22369616 Offset 22369616
+Group: 0 Thread 2 Global Thread 2 running on hwthread 2 - Vector length 22369616 Offset 44739232
+Group: 0 Thread 3 Global Thread 3 running on hwthread 3 - Vector length 22369616 Offset 67108848
+Group: 0 Thread 4 Global Thread 4 running on hwthread 4 - Vector length 22369616 Offset 89478464
+Group: 0 Thread 5 Global Thread 5 running on hwthread 5 - Vector length 22369616 Offset 111848080
+Group: 0 Thread 6 Global Thread 6 running on hwthread 6 - Vector length 22369616 Offset 134217696
+Group: 0 Thread 7 Global Thread 7 running on hwthread 7 - Vector length 22369616 Offset 156587312
+--------------------------------------------------------------------------------
+Cycles:			27464303256
+CPU Clock:		2396132863
+Cycle Clock:		2396132863
+Time:			1.146193e+01 sec
+Iterations:		1024
+Iterations per thread:	128
+Inner loop executions:	1398101
+Size (Byte):		4294966272
+Size per thread:	536870784
+Number of Flops:	45812973568
+MFlops/s:		3996.97
+Data volume (Byte):	549755682816
+MByte/s:		47963.63
+Cycles per update:	1.198975
+Cycles per cacheline:	9.591799
+Loads per update:	2
+Stores per update:	1
+Load bytes per element:	16
+Store bytes per elem.:	8
+Load/store ratio:	2.00
+Instructions:		21474831377
+UOPs:			31496419328
+--------------------------------------------------------------------------------
+Writing Likwid Marker API results to file /tmp/likwid_109768.txt
+### exit=0
