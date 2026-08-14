@@ -34,9 +34,6 @@ Notes:
 - The frequency could not be pinned for the PState-3 runs. The Frequency column
   is the measured `Clock [MHz]` for that run and the Theoretical column is
   computed at that clock, not at 3.7 GHz.
-- Each run was repeated twice; the higher of the two is tabulated.
-- All runs were driven by `run_peaks.sh` and reduced by `collect_peaks.py`;
-  per-run values including both repeats are in `logs/summary_*.csv`.
 
 ## Peaks
 
@@ -50,7 +47,11 @@ Theoretical:
 Likwid command (scaled for number of cores):
 
 ``` bash
+numactl --cpunodebind=0 --membind=0 likwid-perfctr -C 0 -g FLOPS_DP -m likwid-bench -t peakflops_avx512_fma -w M0:524288B:1
+numactl --cpunodebind=0 --membind=0 likwid-perfctr -C 0-7 -g FLOPS_DP -m likwid-bench -t peakflops_avx512_fma -w M0:4194304B:8
 numactl --cpunodebind=0 --membind=0 likwid-perfctr -C 0-23 -g FLOPS_DP -m likwid-bench -t peakflops_avx512_fma -w M0:12582912B:24
+numactl --cpunodebind=0-3 --membind=0-3 likwid-perfctr -C 0-95 -g FLOPS_DP -m likwid-bench -t peakflops_avx512_fma -w M0:12582912B:24 -w M1:12582912B:24 -w M2:12582912B:24 -w M3:12582912B:24
+numactl --cpunodebind=0-7 --membind=0-7 likwid-perfctr -C 0-191 -g FLOPS_DP -m likwid-bench -t peakflops_avx512_fma -w M0:12582912B:24 -w M1:12582912B:24 -w M2:12582912B:24 -w M3:12582912B:24 -w M4:12582912B:24 -w M5:12582912B:24 -w M6:12582912B:24 -w M7:12582912B:24
 ```
 
 PState-3 (with boost)
@@ -81,7 +82,11 @@ Theoretical:
 Likwid command (scaled for number of cores):
 
 ``` bash
-numactl --cpunodebind=0 --membind=0 likwid-perfctr -C 0-23 -g FLOPS_DP -m likwid-bench -t peakflops_amd_zen_avx512_fma_add -w M0:12582912B:24
+numactl --cpunodebind=0 --membind=0 likwid-perfctr -C 0 -g FLOPS_DP -m likwid-bench -t peakflops_avx512_fma_add -w M0:524288B:1
+numactl --cpunodebind=0 --membind=0 likwid-perfctr -C 0-7 -g FLOPS_DP -m likwid-bench -t peakflops_avx512_fma_add -w M0:4194304B:8
+numactl --cpunodebind=0 --membind=0 likwid-perfctr -C 0-23 -g FLOPS_DP -m likwid-bench -t peakflops_avx512_fma_add -w M0:12582912B:24
+numactl --cpunodebind=0-3 --membind=0-3 likwid-perfctr -C 0-95 -g FLOPS_DP -m likwid-bench -t peakflops_avx512_fma_add -w M0:12582912B:24 -w M1:12582912B:24 -w M2:12582912B:24 -w M3:12582912B:24
+numactl --cpunodebind=0-7 --membind=0-7 likwid-perfctr -C 0-191 -g FLOPS_DP -m likwid-bench -t peakflops_avx512_fma_add -w M0:12582912B:24 -w M1:12582912B:24 -w M2:12582912B:24 -w M3:12582912B:24 -w M4:12582912B:24 -w M5:12582912B:24 -w M6:12582912B:24 -w M7:12582912B:24
 ```
 
 PState-3 (with boost)
@@ -112,7 +117,11 @@ Theoretical:
 Likwid command (scaled for number of cores):
 
 ``` bash
+numactl --cpunodebind=0 --membind=0 likwid-perfctr -C 0 -g FLOPS_SP -m likwid-bench -t peakflops_sp_avx512_fma -w M0:524288B:1
+numactl --cpunodebind=0 --membind=0 likwid-perfctr -C 0-7 -g FLOPS_SP -m likwid-bench -t peakflops_sp_avx512_fma -w M0:4194304B:8
 numactl --cpunodebind=0 --membind=0 likwid-perfctr -C 0-23 -g FLOPS_SP -m likwid-bench -t peakflops_sp_avx512_fma -w M0:12582912B:24
+numactl --cpunodebind=0-3 --membind=0-3 likwid-perfctr -C 0-95 -g FLOPS_SP -m likwid-bench -t peakflops_sp_avx512_fma -w M0:12582912B:24 -w M1:12582912B:24 -w M2:12582912B:24 -w M3:12582912B:24
+numactl --cpunodebind=0-7 --membind=0-7 likwid-perfctr -C 0-191 -g FLOPS_SP -m likwid-bench -t peakflops_sp_avx512_fma -w M0:12582912B:24 -w M1:12582912B:24 -w M2:12582912B:24 -w M3:12582912B:24 -w M4:12582912B:24 -w M5:12582912B:24 -w M6:12582912B:24 -w M7:12582912B:24
 ```
 
 PState-3 (with boost)
@@ -145,7 +154,11 @@ Theoretical:
 Likwid command (scaled for number of cores):
 
 ``` bash
+numactl --cpunodebind=0 --membind=0 likwid-perfctr -C 0 -g FLOPS_SP -m likwid-bench -t peakflops_sp_avx512 -w M0:524288B:1
+numactl --cpunodebind=0 --membind=0 likwid-perfctr -C 0-7 -g FLOPS_SP -m likwid-bench -t peakflops_sp_avx512 -w M0:4194304B:8
 numactl --cpunodebind=0 --membind=0 likwid-perfctr -C 0-23 -g FLOPS_SP -m likwid-bench -t peakflops_sp_avx512 -w M0:12582912B:24
+numactl --cpunodebind=0-3 --membind=0-3 likwid-perfctr -C 0-95 -g FLOPS_SP -m likwid-bench -t peakflops_sp_avx512 -w M0:12582912B:24 -w M1:12582912B:24 -w M2:12582912B:24 -w M3:12582912B:24
+numactl --cpunodebind=0-7 --membind=0-7 likwid-perfctr -C 0-191 -g FLOPS_SP -m likwid-bench -t peakflops_sp_avx512 -w M0:12582912B:24 -w M1:12582912B:24 -w M2:12582912B:24 -w M3:12582912B:24 -w M4:12582912B:24 -w M5:12582912B:24 -w M6:12582912B:24 -w M7:12582912B:24
 ```
 
 PState-3 (with boost)
@@ -179,7 +192,11 @@ Theoretical:
 Likwid command (scaled for number of cores):
 
 ``` bash
+numactl --cpunodebind=0 --membind=0 likwid-perfctr -C 0 -g FLOPS_SP -m likwid-bench -t peakflops_sp -w M0:524288B:1
+numactl --cpunodebind=0 --membind=0 likwid-perfctr -C 0-7 -g FLOPS_SP -m likwid-bench -t peakflops_sp -w M0:4194304B:8
 numactl --cpunodebind=0 --membind=0 likwid-perfctr -C 0-23 -g FLOPS_SP -m likwid-bench -t peakflops_sp -w M0:12582912B:24
+numactl --cpunodebind=0-3 --membind=0-3 likwid-perfctr -C 0-95 -g FLOPS_SP -m likwid-bench -t peakflops_sp -w M0:12582912B:24 -w M1:12582912B:24 -w M2:12582912B:24 -w M3:12582912B:24
+numactl --cpunodebind=0-7 --membind=0-7 likwid-perfctr -C 0-191 -g FLOPS_SP -m likwid-bench -t peakflops_sp -w M0:12582912B:24 -w M1:12582912B:24 -w M2:12582912B:24 -w M3:12582912B:24 -w M4:12582912B:24 -w M5:12582912B:24 -w M6:12582912B:24 -w M7:12582912B:24
 ```
 
 PState-3 (with boost)
@@ -213,6 +230,8 @@ Likwid command (scaled for number of cores):
 numactl --cpunodebind=0 --membind=0 likwid-perfctr -C 0     -g MEM -m likwid-bench -t stream_mem_avx_fma -w M0:536870912B:1
 numactl --cpunodebind=0 --membind=0 likwid-perfctr -C 0-7   -g MEM -m likwid-bench -t stream_mem_avx_fma -w M0:4294967296B:8
 numactl --cpunodebind=0 --membind=0 likwid-perfctr -C 0-23  -g MEM -m likwid-bench -t stream_mem_avx_fma -w M0:12884901888B:24
+numactl --cpunodebind=0-3 --membind=0-3 likwid-perfctr -C 0-95 -g MEM -m likwid-bench -t stream_mem_avx_fma -w M0:12884901888B:24 -w M1:12884901888B:24 -w M2:12884901888B:24 -w M3:12884901888B:24
+numactl --cpunodebind=0-7 --membind=0-7 likwid-perfctr -C 0-191 -g MEM -m likwid-bench -t stream_mem_avx_fma -w M0:12884901888B:24 -w M1:12884901888B:24 -w M2:12884901888B:24 -w M3:12884901888B:24 -w M4:12884901888B:24 -w M5:12884901888B:24 -w M6:12884901888B:24 -w M7:12884901888B:24
 ```
 
 PState-3 (with boost)
@@ -241,22 +260,24 @@ Likwid command (scaled for number of cores):
 numactl --cpunodebind=0 --membind=0 likwid-perfctr -C 0     -g L2 -m likwid-bench -t load -w M0:4194304B:1
 numactl --cpunodebind=0 --membind=0 likwid-perfctr -C 0-7   -g L2 -m likwid-bench -t load -w M0:33554432B:8
 numactl --cpunodebind=0 --membind=0 likwid-perfctr -C 0-23  -g L2 -m likwid-bench -t load -w M0:100663296B:24
+numactl --cpunodebind=0-3 --membind=0-3 likwid-perfctr -C 0-95 -g L2 -m likwid-bench -t load -w M0:100663296B:24 -w M1:100663296B:24 -w M2:100663296B:24 -w M3:100663296B:24
+numactl --cpunodebind=0-7 --membind=0-7 likwid-perfctr -C 0-191 -g L2 -m likwid-bench -t load -w M0:100663296B:24 -w M1:100663296B:24 -w M2:100663296B:24 -w M3:100663296B:24 -w M4:100663296B:24 -w M5:100663296B:24 -w M6:100663296B:24 -w M7:100663296B:24
 ```
 
 PState-3 (with boost)
 | Cores | CCDs | NUMAs | Per core (GB/s) | Aggregate (GB/s) | Frequency (GHz) | Per core / Frequency (GB/s/GHz) |
-|-------|------|-------|-----------------|------------------|-----------------|----------------------------------|
-| 1     | 1    | 1     | 57.61           | 57.61            | 3.693           | 15.60                             |
-| 8     | 1    | 1     | 56.74           | 453.94           | 3.694           | 15.36                             |
-| 24    | 3    | 1     | 55.84           | 1340.12          | 3.647           | 15.31                             |
-| 96    | 12   | 4     | 35.29           | 3387.40          | 2.355           | 14.98                             |
-| 192   | 24   | 8     | 35.86           | 6885.80          | 2.531           | 14.17                             |
+|-------|------|-------|-----------------|------------------|-----------------|---------------------------------|
+| 1     | 1    | 1     | 57.61           | 57.61            | 3.693           | 15.60                           |
+| 8     | 1    | 1     | 56.74           | 453.94           | 3.694           | 15.36                           |
+| 24    | 3    | 1     | 55.84           | 1340.12          | 3.647           | 15.31                           |
+| 96    | 12   | 4     | 35.29           | 3387.40          | 2.355           | 14.98                           |
+| 192   | 24   | 8     | 35.86           | 6885.80          | 2.531           | 14.17                           |
 
 PState-2 (`cpupower` limited frequency)
 | Cores | CCDs | NUMAs | Per core (GB/s) | Aggregate (GB/s) | Frequency (GHz) | Per core / Frequency (GB/s/GHz) |
-|-------|------|-------|-----------------|------------------|-----------------|----------------------------------|
-| 1     | 1    | 1     | 29.38           | 29.38            | 1.897           | 15.49                             |
-| 8     | 1    | 1     | 29.61           | 236.86           | 1.897           | 15.61                             |
-| 24    | 3    | 1     | 29.33           | 703.86           | 1.897           | 15.46                             |
-| 96    | 12   | 4     | 29.08           | 2792.02          | 1.897           | 15.33                             |
-| 192   | 24   | 8     | 28.85           | 5539.17          | 1.897           | 15.21                             |
+|-------|------|-------|-----------------|------------------|-----------------|---------------------------------|
+| 1     | 1    | 1     | 29.38           | 29.38            | 1.897           | 15.49                           |
+| 8     | 1    | 1     | 29.61           | 236.86           | 1.897           | 15.61                           |
+| 24    | 3    | 1     | 29.33           | 703.86           | 1.897           | 15.46                           |
+| 96    | 12   | 4     | 29.08           | 2792.02          | 1.897           | 15.33                           |
+| 192   | 24   | 8     | 28.85           | 5539.17          | 1.897           | 15.21                           |
