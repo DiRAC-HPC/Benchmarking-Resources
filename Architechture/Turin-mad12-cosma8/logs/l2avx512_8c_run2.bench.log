@@ -1,0 +1,49 @@
+### tag=l2avx512 cores=8 group=L2BW kernel=load_avx512 run=2/2
+### host=mad12 label=run date=2026-08-17T11:15:15+01:00
++ numactl --cpunodebind=0 --membind=0 likwid-perfctr -C 0-7 -g L2BW -m -o logs_l2/l2avx512_8c_run2.txt likwid-bench -t load_avx512 -w M0:33554432B:8
+
+INFO: You are running LIKWID in a cpuset with 64 CPUs. Taking given IDs as logical ID in cpuset
+Allocate: Process running on hwthread 0 (Domain M0) - Vector length 4194304/33554432 Offset 0 Alignment 512
+Initialization: First thread in domain initializes the whole stream
+--------------------------------------------------------------------------------
+LIKWID MICRO BENCHMARK
+Test: load_avx512
+--------------------------------------------------------------------------------
+Using 1 work groups
+Using 8 threads
+--------------------------------------------------------------------------------
+Using Likwid Marker API
+--------------------------------------------------------------------------------
+Group: 0 Thread 0 Global Thread 0 running on hwthread 0 - Vector length 524288 Offset 0
+Group: 0 Thread 1 Global Thread 1 running on hwthread 1 - Vector length 524288 Offset 524288
+Group: 0 Thread 2 Global Thread 2 running on hwthread 2 - Vector length 524288 Offset 1048576
+Group: 0 Thread 3 Global Thread 3 running on hwthread 3 - Vector length 524288 Offset 1572864
+Group: 0 Thread 4 Global Thread 4 running on hwthread 4 - Vector length 524288 Offset 2097152
+Group: 0 Thread 5 Global Thread 5 running on hwthread 5 - Vector length 524288 Offset 2621440
+Group: 0 Thread 6 Global Thread 6 running on hwthread 6 - Vector length 524288 Offset 3145728
+Group: 0 Thread 7 Global Thread 7 running on hwthread 7 - Vector length 524288 Offset 3670016
+--------------------------------------------------------------------------------
+Cycles:			3799551969
+CPU Clock:		2696301749
+Cycle Clock:		2696301749
+Time:			1.409172e+00 sec
+Iterations:		262144
+Iterations per thread:	32768
+Inner loop executions:	16384
+Size (Byte):		33554432
+Size per thread:	4194304
+Number of Flops:	0
+MFlops/s:		0.00
+Data volume (Byte):	1099511627776
+MByte/s:		780253.87
+Cycles per update:	0.027645
+Cycles per cacheline:	0.221163
+Loads per update:	1
+Stores per update:	0
+Load bytes per element:	8
+Store bytes per elem.:	0
+Instructions:		30064771088
+UOPs:			25769803776
+--------------------------------------------------------------------------------
+Writing Likwid Marker API results to file /tmp/likwid_782192.txt
+### exit=0

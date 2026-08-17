@@ -1,0 +1,41 @@
+### tag=l2avx512 cores=1 group=L2BW kernel=load_avx512 run=1/2
+### host=mad12 label=run date=2026-08-17T17:07:34+01:00
++ numactl --cpunodebind=0 --membind=0 likwid-perfctr -C 0 -g L2BW -m -o logs_l2_2.4GHz/l2avx512_1c_run1.txt likwid-bench -t load_avx512 -w M0:4194304B:1
+
+INFO: You are running LIKWID in a cpuset with 64 CPUs. Taking given IDs as logical ID in cpuset
+Allocate: Process running on hwthread 0 (Domain M0) - Vector length 524288/4194304 Offset 0 Alignment 512
+--------------------------------------------------------------------------------
+LIKWID MICRO BENCHMARK
+Test: load_avx512
+--------------------------------------------------------------------------------
+Using 1 work groups
+Using 1 threads
+--------------------------------------------------------------------------------
+Using Likwid Marker API
+--------------------------------------------------------------------------------
+Group: 0 Thread 0 Global Thread 0 running on hwthread 0 - Vector length 524288 Offset 0
+--------------------------------------------------------------------------------
+Cycles:			5262518295
+CPU Clock:		2696293104
+Cycle Clock:		2696293104
+Time:			1.951760e+00 sec
+Iterations:		32768
+Iterations per thread:	32768
+Inner loop executions:	16384
+Size (Byte):		4194304
+Size per thread:	4194304
+Number of Flops:	0
+MFlops/s:		0.00
+Data volume (Byte):	137438953472
+MByte/s:		70417.94
+Cycles per update:	0.306319
+Cycles per cacheline:	2.450551
+Loads per update:	1
+Stores per update:	0
+Load bytes per element:	8
+Store bytes per elem.:	0
+Instructions:		3758096400
+UOPs:			3221225472
+--------------------------------------------------------------------------------
+Writing Likwid Marker API results to file /tmp/likwid_1221464.txt
+### exit=0

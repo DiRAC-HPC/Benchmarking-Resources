@@ -1,0 +1,33 @@
+--------------------------------------------------------------------------------
+CPU name:	AMD EPYC 9755 128-Core Processor               
+CPU type:	AMD K1A (Zen5) architecture
+CPU clock:	2.70 GHz
+--------------------------------------------------------------------------------
+Region bench, Group 1: FLOPS_DP
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   1.815303 |
+|     call count    |          1 |
++-------------------+------------+
++-------------------------------------+---------+--------------+
+|                Event                | Counter |  HWThread 0  |
++-------------------------------------+---------+--------------+
+|           ACTUAL_CPU_CLOCK          |  FIXC1  |   4375308000 |
+|            MAX_CPU_CLOCK            |  FIXC2  |   4892824000 |
+|         RETIRED_INSTRUCTIONS        |   PMC0  |  18256900000 |
+|         CPU_CLOCKS_UNHALTED         |   PMC1  |   4367531000 |
+|                MERGE                |   PMC3  |            0 |
+| RETIRED_SSE_AVX_FLOPS_ALL_DP_SCALAR |   PMC2  |           12 |
+|                MERGE                |   PMC5  |            0 |
+| RETIRED_SSE_AVX_FLOPS_ALL_DP_PACKED |   PMC4  | 193273500000 |
++-------------------------------------+---------+--------------+
++----------------------+-------------+
+|        Metric        |  HWThread 0 |
++----------------------+-------------+
+|  Runtime (RDTSC) [s] |      1.8153 |
+| Runtime unhalted [s] |      1.6227 |
+|      Clock [MHz]     |   2411.1000 |
+|          CPI         |      0.2392 |
+|     DP [MFLOP/s]     | 106469.0027 |
++----------------------+-------------+

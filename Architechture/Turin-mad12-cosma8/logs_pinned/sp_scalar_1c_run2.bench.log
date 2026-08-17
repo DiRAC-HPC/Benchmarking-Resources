@@ -1,0 +1,41 @@
+### tag=sp_scalar cores=1 group=FLOPS_SP kernel=peakflops_sp run=2/2
+### host=mad12 label=run date=2026-08-17T16:25:06+01:00
++ numactl --cpunodebind=0 --membind=0 likwid-perfctr -C 0 -g FLOPS_SP -m -o logs_2.4GHz/sp_scalar_1c_run2.txt likwid-bench -t peakflops_sp -w M0:524288B:1
+
+INFO: You are running LIKWID in a cpuset with 64 CPUs. Taking given IDs as logical ID in cpuset
+Allocate: Process running on hwthread 0 (Domain M0) - Vector length 131072/524288 Offset 0 Alignment 1024
+--------------------------------------------------------------------------------
+LIKWID MICRO BENCHMARK
+Test: peakflops_sp
+--------------------------------------------------------------------------------
+Using 1 work groups
+Using 1 threads
+--------------------------------------------------------------------------------
+Using Likwid Marker API
+--------------------------------------------------------------------------------
+Group: 0 Thread 0 Global Thread 0 running on hwthread 0 - Vector length 131072 Offset 0
+--------------------------------------------------------------------------------
+Cycles:			4595773005
+CPU Clock:		2696252920
+Cycle Clock:		2696252920
+Time:			1.704504e+00 sec
+Iterations:		4096
+Iterations per thread:	4096
+Inner loop executions:	131072
+Size (Byte):		524288
+Size per thread:	524288
+Number of Flops:	8589934592
+MFlops/s:		5039.55
+Data volume (Byte):	2147483648
+MByte/s:		1259.89
+Cycles per update:	8.560294
+Cycles per cacheline:	136.964709
+Loads per update:	1
+Stores per update:	0
+Load bytes per element:	4
+Store bytes per elem.:	0
+Instructions:		10737418272
+UOPs:			10200547328
+--------------------------------------------------------------------------------
+Writing Likwid Marker API results to file /tmp/likwid_1056598.txt
+### exit=0

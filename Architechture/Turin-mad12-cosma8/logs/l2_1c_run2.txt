@@ -1,0 +1,34 @@
+--------------------------------------------------------------------------------
+CPU name:	AMD EPYC 9755 128-Core Processor               
+CPU type:	AMD K1A (Zen5) architecture
+CPU clock:	2.70 GHz
+--------------------------------------------------------------------------------
+Region bench, Group 1: L2BW
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   1.040629 |
+|     call count    |          1 |
++-------------------+------------+
++----------------------------+---------+-------------+
+|            Event           | Counter |  HWThread 0 |
++----------------------------+---------+-------------+
+|      ACTUAL_CPU_CLOCK      |  FIXC1  |  4307619000 |
+|        MAX_CPU_CLOCK       |  FIXC2  |  2804804000 |
+|    RETIRED_INSTRUCTIONS    |   PMC0  | 11811680000 |
+|     CPU_CLOCKS_UNHALTED    |   PMC1  |  4300310000 |
+| REQUESTS_TO_L2_GRP1_RD_ANY |   PMC2  |  1074094000 |
+|     L2_PF_HIT_IN_L2_ALL    |   PMC3  |  2267117000 |
++----------------------------+---------+-------------+
++-------------------------------+-------------+
+|             Metric            |  HWThread 0 |
++-------------------------------+-------------+
+|      Runtime (RDTSC) [s]      |      1.0406 |
+|      Runtime unhalted [s]     |      1.5982 |
+|          Clock [MHz]          |   4139.3489 |
+|              CPI              |      0.3641 |
+|    L2 bandwidth [MBytes/s]    |  66058.1398 |
+|    L2 data volume [GBytes]    |     68.7420 |
+| Prefetch bandwidth [MBytes/s] | 139430.5636 |
+| Prefetch data volume [GBytes] |    145.0955 |
++-------------------------------+-------------+

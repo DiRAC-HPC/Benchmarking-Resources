@@ -1,0 +1,58 @@
+--------------------------------------------------------------------------------
+CPU name:	AMD EPYC 9755 128-Core Processor               
+CPU type:	AMD K1A (Zen5) architecture
+CPU clock:	2.70 GHz
+--------------------------------------------------------------------------------
+Region bench, Group 1: MEM
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   1.224731 |
+|     call count    |          1 |
++-------------------+------------+
++----------------------+---------+------------+
+|         Event        | Counter | HWThread 0 |
++----------------------+---------+------------+
+|   ACTUAL_CPU_CLOCK   |  FIXC1  | 2953720000 |
+|     MAX_CPU_CLOCK    |  FIXC2  | 3301940000 |
+| RETIRED_INSTRUCTIONS |   PMC0  | 2684381000 |
+|  CPU_CLOCKS_UNHALTED |   PMC1  | 2943426000 |
+|      CAS_CMD_RD      |  UMC0C0 |  229750600 |
+|      CAS_CMD_WR      |  UMC0C1 |  119343600 |
+|      CAS_CMD_RD      |  UMC1C0 |  229790000 |
+|      CAS_CMD_WR      |  UMC1C1 |  119337900 |
+|      CAS_CMD_RD      |  UMC2C0 |  229799100 |
+|      CAS_CMD_WR      |  UMC2C1 |  119318100 |
+|      CAS_CMD_RD      |  UMC3C0 |      57182 |
+|      CAS_CMD_WR      |  UMC3C1 |      21004 |
+|      CAS_CMD_RD      |  UMC4C0 |      57745 |
+|      CAS_CMD_WR      |  UMC4C1 |      21057 |
+|      CAS_CMD_RD      |  UMC5C0 |      58117 |
+|      CAS_CMD_WR      |  UMC5C1 |      21089 |
+|      CAS_CMD_RD      |  UMC6C0 |      37291 |
+|      CAS_CMD_WR      |  UMC6C1 |      19290 |
+|      CAS_CMD_RD      |  UMC7C0 |      37545 |
+|      CAS_CMD_WR      |  UMC7C1 |      19338 |
+|      CAS_CMD_RD      |  UMC8C0 |      38422 |
+|      CAS_CMD_WR      |  UMC8C1 |      19380 |
+|      CAS_CMD_RD      |  UMC9C0 |      84720 |
+|      CAS_CMD_WR      |  UMC9C1 |      22931 |
+|      CAS_CMD_RD      | UMC10C0 |      82902 |
+|      CAS_CMD_WR      | UMC10C1 |      22378 |
+|      CAS_CMD_RD      | UMC11C0 |      89298 |
+|      CAS_CMD_WR      | UMC11C1 |      21855 |
++----------------------+---------+------------+
++-----------------------------------+------------+
+|               Metric              | HWThread 0 |
++-----------------------------------+------------+
+|        Runtime (RDTSC) [s]        |     1.2247 |
+|        Runtime unhalted [s]       |     1.0955 |
+|            Clock [MHz]            |  2411.9400 |
+|                CPI                |     1.0965 |
+|  Memory read bandwidth [MBytes/s] | 36050.7793 |
+|  Memory read data volume [GBytes] |    44.1525 |
+| Memory write bandwidth [MBytes/s] | 18717.6017 |
+| Memory write data volume [GBytes] |    22.9240 |
+|    Memory bandwidth [MBytes/s]    | 54768.3810 |
+|    Memory data volume [GBytes]    |    67.0765 |
++-----------------------------------+------------+

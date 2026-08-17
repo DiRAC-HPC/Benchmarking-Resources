@@ -1,9 +1,9 @@
 ## Technical specifications:
 
-Node: `mad13`, 2 × AMD EPYC 9654 (Zen 4, 96 cores/socket), NPS=4, DDR5-4800
-(24 × 64 GiB DIMMs, 1 DIMM per channel, confirmed by `dmidecode -t 17`).
-SMT on: 384 logical cpus, 0-191 physical, 192-383 siblings. All runs below use
-physical cores only, one thread per core.
+Node: `mad13`, 2 × AMD EPYC 9654 (Zen 4, 96 cores/socket), NPS=4, DDR5-4800 (24
+× 64 GiB DIMMs, 1 DIMM per channel, confirmed by `dmidecode -t 17`). SMT on: 384
+logical cpus, 0-191 physical, 192-383 siblings. All runs below use physical
+cores only, one thread per core.
 
 | Component                   | Per-Core          | Per-CCD (8 cores) | Per-NUMA (3 CCDs)          | Per-Socket (12 CCDs) | Node (2 Sockets) |
 |-----------------------------|-------------------|-------------------|----------------------------|----------------------|------------------|
@@ -281,3 +281,37 @@ PState-2 (`cpupower` limited frequency)
 | 24    | 3    | 1     | 29.33           | 703.86           | 1.897           | 15.46                           |
 | 96    | 12   | 4     | 29.08           | 2792.02          | 1.897           | 15.33                           |
 | 192   | 24   | 8     | 28.85           | 5539.17          | 1.897           | 15.21                           |
+
+### L2 bandwidth (load_avx, 256-bit)
+
+Likwid command (scaled for number of cores):
+
+``` bash
+numactl --cpunodebind=0 --membind=0 likwid-perfctr -C 0     -g L2 -m likwid-bench -t load_avx -w M0:4194304B:1
+numactl --cpunodebind=0 --membind=0 likwid-perfctr -C 0-7   -g L2 -m likwid-bench -t load_avx -w M0:33554432B:8
+numactl --cpunodebind=0 --membind=0 likwid-perfctr -C 0-23  -g L2 -m likwid-bench -t load_avx -w M0:100663296B:24
+numactl --cpunodebind=0-3 --membind=0-3 likwid-perfctr -C 0-95 -g L2 -m likwid-bench -t load_avx -w M0:100663296B:24 -w M1:100663296B:24 -w M2:100663296B:24 -w M3:100663296B:24
+numactl --cpunodebind=0-7 --membind=0-7 likwid-perfctr -C 0-191 -g L2 -m likwid-bench -t load_avx -w M0:100663296B:24 -w M1:100663296B:24 -w M2:100663296B:24 -w M3:100663296B:24 -w M4:100663296B:24 -w M5:100663296B:24 -w M6:100663296B:24 -w M7:100663296B:24
+```
+
+PState-3 (with boost)
+| Cores | CCDs | NUMAs | Per core (GB/s) | Aggregate (GB/s) | Frequency (GHz) | Per core / Frequency (GB/s/GHz) |
+|-------|------|-------|-----------------|------------------|-----------------|---------------------------------|
+| 1     | 1    | 1     | 89.86           | 89.86            | 3.694           | 24.32                           |
+| 8     | 1    | 1     | 77.36           | 618.86           | 3.694           | 20.94                           |
+| 24    | 3    | 1     | 72.17           | 1732.03          | 3.411           | 21.16                           |
+| 96    | 12   | 4     | 46.23           | 4438.55          | 2.275           | 20.32                           |
+| 192   | 24   | 8     | 47.99           | 9213.33          | 2.440           | 19.67                           |
+
+PState-2 (`cpupower` limited frequency)
+| Cores | CCDs | NUMAs | Per core (GB/s) | Aggregate (GB/s) | Frequency (GHz) | Per core / Frequency (GB/s/GHz) |
+|-------|------|-------|-----------------|------------------|-----------------|---------------------------------|
+| 1     | 1    | 1     | -               | -                | -               | -                               |
+| 8     | 1    | 1     | -               | -                | -               | -                               |
+| 24    | 3    | 1     | -               | -                | -               | -                               |
+| 96    | 12   | 4     | -               | -                | -               | -                               |
+| 192   | 24   | 8     | -               | -                | -               | -                               |
+
+Note: load_avx512 was also run and produces virtually identical L2 bandwidth,
+which is expected since Zen4's L1<->L2 datapath width does not increase for
+512-bit accesses (same 2x256-bit tandem execution as AVX-512 FMA, see above).

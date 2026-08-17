@@ -1,0 +1,49 @@
+### tag=dp_fma cores=8 group=FLOPS_DP kernel=peakflops_avx512_fma run=2/2
+### host=mad12 label=run date=2026-08-14T17:26:49+01:00
++ numactl --cpunodebind=0 --membind=0 likwid-perfctr -C 0-7 -g FLOPS_DP -m -o logs/dp_fma_8c_run2.txt likwid-bench -t peakflops_avx512_fma -w M0:4194304B:8
+
+INFO: You are running LIKWID in a cpuset with 64 CPUs. Taking given IDs as logical ID in cpuset
+Allocate: Process running on hwthread 0 (Domain M0) - Vector length 524288/4194304 Offset 0 Alignment 512
+Initialization: First thread in domain initializes the whole stream
+--------------------------------------------------------------------------------
+LIKWID MICRO BENCHMARK
+Test: peakflops_avx512_fma
+--------------------------------------------------------------------------------
+Using 1 work groups
+Using 8 threads
+--------------------------------------------------------------------------------
+Using Likwid Marker API
+--------------------------------------------------------------------------------
+Group: 0 Thread 0 Global Thread 0 running on hwthread 0 - Vector length 65536 Offset 0
+Group: 0 Thread 1 Global Thread 1 running on hwthread 1 - Vector length 65536 Offset 65536
+Group: 0 Thread 2 Global Thread 2 running on hwthread 2 - Vector length 65536 Offset 131072
+Group: 0 Thread 3 Global Thread 3 running on hwthread 3 - Vector length 65536 Offset 196608
+Group: 0 Thread 4 Global Thread 4 running on hwthread 4 - Vector length 65536 Offset 262144
+Group: 0 Thread 5 Global Thread 5 running on hwthread 5 - Vector length 65536 Offset 327680
+Group: 0 Thread 6 Global Thread 6 running on hwthread 6 - Vector length 65536 Offset 393216
+Group: 0 Thread 7 Global Thread 7 running on hwthread 7 - Vector length 65536 Offset 458752
+--------------------------------------------------------------------------------
+Cycles:			5262715773
+CPU Clock:		2696290989
+Cycle Clock:		2696290989
+Time:			1.951835e+00 sec
+Iterations:		1048576
+Iterations per thread:	131072
+Inner loop executions:	8192
+Size (Byte):		4194304
+Size per thread:	524288
+Number of Flops:	2061584302080
+MFlops/s:		1056228.65
+Data volume (Byte):	549755813888
+MByte/s:		281660.97
+Cycles per update:	0.076583
+Cycles per cacheline:	0.612661
+Loads per update:	1
+Stores per update:	0
+Load bytes per element:	8
+Store bytes per elem.:	0
+Instructions:		163208757280
+UOPs:			154618822656
+--------------------------------------------------------------------------------
+Writing Likwid Marker API results to file /tmp/likwid_152032.txt
+### exit=0

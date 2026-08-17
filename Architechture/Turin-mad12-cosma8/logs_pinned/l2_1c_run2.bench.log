@@ -1,0 +1,41 @@
+### tag=l2 cores=1 group=L2BW kernel=load run=2/2
+### host=mad12 label=run date=2026-08-17T17:07:10+01:00
++ numactl --cpunodebind=0 --membind=0 likwid-perfctr -C 0 -g L2BW -m -o logs_l2_2.4GHz/l2_1c_run2.txt likwid-bench -t load -w M0:4194304B:1
+
+INFO: You are running LIKWID in a cpuset with 64 CPUs. Taking given IDs as logical ID in cpuset
+Allocate: Process running on hwthread 0 (Domain M0) - Vector length 524288/4194304 Offset 0 Alignment 512
+--------------------------------------------------------------------------------
+LIKWID MICRO BENCHMARK
+Test: load
+--------------------------------------------------------------------------------
+Using 1 work groups
+Using 1 threads
+--------------------------------------------------------------------------------
+Using Likwid Marker API
+--------------------------------------------------------------------------------
+Group: 0 Thread 0 Global Thread 0 running on hwthread 0 - Vector length 524288 Offset 0
+--------------------------------------------------------------------------------
+Cycles:			4873801428
+CPU Clock:		2696291424
+Cycle Clock:		2696291424
+Time:			1.807594e+00 sec
+Iterations:		16384
+Iterations per thread:	16384
+Inner loop executions:	65536
+Size (Byte):		4194304
+Size per thread:	4194304
+Number of Flops:	0
+MFlops/s:		0.00
+Data volume (Byte):	68719476736
+MByte/s:		38017.09
+Cycles per update:	0.567385
+Cycles per cacheline:	4.539081
+Loads per update:	1
+Stores per update:	0
+Load bytes per element:	8
+Store bytes per elem.:	0
+Instructions:		11811160080
+UOPs:			10737418240
+--------------------------------------------------------------------------------
+Writing Likwid Marker API results to file /tmp/likwid_1221324.txt
+### exit=0

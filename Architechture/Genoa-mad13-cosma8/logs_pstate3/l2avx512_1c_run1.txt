@@ -1,0 +1,34 @@
+--------------------------------------------------------------------------------
+CPU name:	AMD EPYC 9654 96-Core Processor                
+CPU type:	AMD K19 (Zen4) architecture
+CPU clock:	2.40 GHz
+--------------------------------------------------------------------------------
+Region bench, Group 1: L2
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   1.573113 |
+|     call count    |          1 |
++-------------------+------------+
++-------------------------------+---------+------------+
+|             Event             | Counter | HWThread 0 |
++-------------------------------+---------+------------+
+|        ACTUAL_CPU_CLOCK       |  FIXC1  | 5812253000 |
+|         MAX_CPU_CLOCK         |  FIXC2  | 3770122000 |
+|      RETIRED_INSTRUCTIONS     |   PMC0  | 3759120000 |
+|      CPU_CLOCKS_UNHALTED      |   PMC1  | 5787266000 |
+| REQUESTS_TO_L2_GRP1_ALL_NO_PF |   PMC2  | 2155275000 |
+|        L2_PF_HIT_IN_L2        |   PMC3  |  907765000 |
++-------------------------------+---------+------------+
++-------------------------------+------------+
+|             Metric            | HWThread 0 |
++-------------------------------+------------+
+|      Runtime (RDTSC) [s]      |     1.5731 |
+|      Runtime unhalted [s]     |     2.4254 |
+|          Clock [MHz]          |  3694.4068 |
+|              CPI              |     1.5395 |
+|    L2 bandwidth [MBytes/s]    | 87684.4829 |
+|    L2 data volume [GBytes]    |   137.9376 |
+| Prefetch bandwidth [MBytes/s] | 36931.2058 |
+| Prefetch data volume [GBytes] |    58.0970 |
++-------------------------------+------------+
